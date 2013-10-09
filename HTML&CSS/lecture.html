@@ -1,0 +1,113 @@
+﻿<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+				<div class="logo">
+					<div class="logo-name">
+						Яндекс ШРИ в Москве 2013
+					</div>
+					<div class="when-where">
+						7 сентября - 31 декабря
+					</div>
+				</div>
+				<div class="horizontal-menu">
+					<div class="horizontal-menu-item">
+						<a href=#>О мероприятии</a>
+					</div>
+					<div class="horizontal-menu-item">
+						<span class="menu-item-name"><a href=#>Программа</a></span>
+					</div>
+					<div class="horizontal-menu-item">
+						<span class="menu-item-name"><a href=#>Докладчики</a></span>
+					</div>
+					<div class="horizontal-menu-item">
+						<span class="menu-item-name">Правила отбора</span>
+					</div>
+					<div class="horizontal-menu-item">
+						<span class="menu-item-name"><a href=#>FAQ</a></span>
+					</div>
+					<div class="horizontal-menu-item">
+						<span class="menu-item-name"><a href=#>Выпускники</a></span>
+					</div>
+				</div>
+		</div>
+	    <div class="content">
+    		<p>
+				<a href="#">Программа(все лекции)</a> > <span>Регулярные выражения</span>
+			</p>
+			<h3>Регулярные выражения</h3>
+			<div class="teacher-container">
+				<a class="people-sticker-inner" href=#><img src="http://avatars.yandex.net/get-yaevents/9c6a228a5196ef3cb1c73c9e06ab24b2/365x365" alt="" class="people__image"/><p class="yandex">Георгий Мостоловица</p></a>
+			</div>
+			<div class="people-description">
+				<p>Регулярные выражения - формальный язык поиска и осуществления манипуляций с подстроками в тексте. Сейчас трудно найти программиста, который их никогда не использовал. Например, при помощи регулярных выражений можно задать шаблоны, позволяющие:</p>
+					<ul>
+						<li>найти все последовательности символов «кот» в любом контексте, как то: «кот», «котлета», «терракотовый»;</li>
+						<li>найти отдельно стоящее слово «кот» и заменить его на «кошка»;</li>
+						<li>найти слово «кот», которому предшествует слово «персидский» или «чеширский»;</li>
+						<li>убрать из текста все предложения, в которых упоминается слово кот или кошка.</li>
+					</ul>
+				<p>На примерах Георгий раскроет тонкости синтаксиса регулярных выражений.</p>
+				<div class="horizontal-menu">
+					<div class="horizontal-menu-item">
+						<a href=#>Скачать презентацию в .pdf</a>
+					</div>
+					<div class="horizontal-menu-item">
+						<span class="menu-item-name">
+						<img src="./img/view-icon.png"/><a id='show_hide_present' href=#>Посмотреть презентацию</a>
+					</span>
+					</div>
+					<div class="horizontal-menu-item">
+						<span class="menu-item-name"><a href=#>Скачать видео</a></span>
+					</div>
+					<div class="horizontal-menu-item">
+						<img src="./img/view-icon.png"/><span class="menu-item-name"><a id='show_hide_video' href=#>Посмотреть видео</a></span>
+					</div>
+				</div>
+				<div class="media">
+					<div class="hidden_media" id="presentation">
+					    <iframe src="http://www.slideshare.net/slideshow/embed_code/22938031" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+					</div>
+					<div class="hidden_media" id="video">
+					    <object width="450" height="361"><param name="src" value="http://static.video.yandex.ru/lite/ya-events/6jf85zqrxd.7344/"/><param name="allowFullScreen" value="true"/><param name="scale" value="noscale"/><embed src="http://static.video.yandex.ru/lite/ya-events/6jf85zqrxd.7344/" type="application/x-shockwave-flash" width="450" height="361" allowFullScreen="true" scale="noscale"> </embed></object>
+					</div>
+				</div>
+			</div>
+			</div>
+	</div>
+	<script>
+		window.onload = function(){
+		  var present_link = document.getElementById("show_hide_present");
+		  present_link.onclick = function (){
+		    var presentation = document.getElementById("presentation");
+		    var video = document.getElementById("video");
+		    if (video.className != 'hidden_media'){
+		        video.className = 'hidden_media';
+		    }
+		    if (presentation.className != 'not_hidden_media'){
+		        presentation.className = 'not_hidden_media';
+		    }
+		    return false;
+		  }
+		  var video_link = document.getElementById("show_hide_video");
+		  video_link.onclick = function (){
+		    var presentation = document.getElementById("video");
+		    var presentation = document.getElementById("presentation");
+		    if (presentation.className != 'hidden_media'){
+		        presentation.className = 'hidden_media';
+		    }
+		    if (video.className != 'not_hidden_media'){
+		        video.className = 'not_hidden_media';
+		    }
+		    return false;
+		  }
+		}
+	</script>
+	<div class="footer">
+		© 2013  ООО «<a href="http://www.yandex.ru">Яндекс</a>»	
+	</div>
+</body>
+</html>
