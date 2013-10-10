@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header" id="header">
+		</div>
+		<div class="content">
+			<p><strong>Я живу не в Москве, могу ли я принять участие в Школе?</strong></p>
+	    	<p>Формат нашей Школы предполагает постоянное присутствие слушателей. Если вы готовы самостоятельно переехать в Москву на время обучения, то да. Также вы сможете посмотреть видеозаписи лекций, которые мы выложим после окончания первой части Школы.</p>
+	    	<p><strong>Нужно ли что-то платить за обучение?</strong></p>
+	    	<p>Нет, не нужно. Школа бесплатная, а во время практики мы даже платим стипендию.</p>
+	    	<p><strong>Я не знаю JavaScript, но имею опыт веб-разработки на другом языке (PHP, Ruby, Perl...), смогу ли я попасть в вашу школу?</strong></p>
+	    	<p>Мы не готовы учить всему с нуля, поэтому без начальных знаний обучение в Школе невозможно. Попробуйте самостоятельно выполнить задание — вдруг у вас получится.</p>
+	    	<p><strong>Я не «студент старших курсов или недавний выпускник вуза», смогу ли я принять участие в Школе?</strong></p>
+	    	<p>Вы можете заполнить анкету, и мы рассмотрим её наравне с другими.</p>
+	    	<p><strong>В какое время проходят занятия?</strong></p>
+	    	<p>Занятия теоретического этапа первой ШРИ проходили три раза в неделю:</p>
+	    	<ul>
+	    		<li>вторник с 19:00 до 21:00;</li>
+	    		<li>четверг с 19:00 до 21:00;</li>
+	    		<li>суббота с 12:00 до 15:00.</li>
+	    	</ul>
+		</div>
+	</div>
+	<div class="footer">
+		© 2013  ООО «<a href="http://www.yandex.ru">Яндекс</a>»				
+	</div>
+	<script src = "node_modules/yate/lib/runtime.js"></script>
+	<script src="logo.js"></script>
+	<script src="horizontal_menu.js"></script>
+	<script>
+	window.onload = function(){
+		//получаем логотип
+		var data          = { logo_name: 'Яндекс ШРИ в Москве 2013', when_where: '7 сентября - 31 декабря'};
+		var cpl_logo        = yr.run('logo', data);
+		var element       = document.getElementById("header");
+		//получаем горизонтальное меню
+		data = {
+		    item: [
+		        { link: '#', title: 'О мероприятии'},
+		        { link: '#', title: 'Программа'},
+		        { link: '#', title: 'Докладчики'},
+		        { link: '#', title: 'Правила отбора'},
+		        { link: '#', title: 'FAQ', selected: true},
+		        { link: '#', title: 'Выпускники'}
+		    ]
+		}
+		//собираем header
+		var cpl_menu        = yr.run('horizontal_menu', data);
+		element.innerHTML = cpl_logo  + cpl_menu;
+
+		return false;
+	}
+	</script>
+</body>
+</html>
