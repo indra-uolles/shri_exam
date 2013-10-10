@@ -1,0 +1,75 @@
+﻿<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header" id="header">
+		</div>
+		<div class="content" id="content">
+		</div>
+	</div>
+	<div class="footer">
+		© 2013  ООО «<a href="http://www.yandex.ru">Яндекс</a>»				
+	</div>
+	<script src = "node_modules/yate/lib/runtime.js"></script>
+	<script src="logo.js"></script>
+	<script src="horizontal_menu.js"></script>
+	<script src="unordered_list.js"></script>
+	<script src="text_media.js"></script>
+	<script>
+	window.onload = function(){
+		//получаем логотип
+		var data          = { logo_name: 'Яндекс ШРИ в Москве 2013', when_where: '7 сентября - 31 декабря'};
+		var cpl_logo        = yr.run('logo', data);
+		var element       = document.getElementById("header");
+		//получаем горизонтальное меню
+		data = {
+		    item: [
+		        { link: '#', title: 'О мероприятии'},
+		        { link: '#', title: 'Программа'},
+		        { link: '#', title: 'Докладчики'},
+		        { link: '#', title: 'Правила отбора'},
+		        { link: '#', title: 'FAQ', selected: true},
+		        { link: '#', title: 'Выпускники'}
+		    ]
+		}
+		//собираем header
+		var cpl_menu        = yr.run('horizontal_menu', data);
+		element.innerHTML   = cpl_logo  + cpl_menu;
+
+		data = {
+			text: [
+					{
+						elem: 'p',
+						content: 'На первый этап Второй Школы Разработки интерфейсов было отобрано 39 человек, которые прослушали 31 теоретическую лекцию. Студенты ШРИ узнали про:'
+					},
+					{
+						elem: 'unordered_list',
+						content: [
+							'инструменты разработчика интерфейсов;',
+							'технологии, используемые в современной фронтенд-разработке;',
+							'JavaScript, CSS, XSLT;',
+							'виды фреймворков для разработки интерфейсов;',
+							'дизайн веб-интерфейсов.'
+						]
+					},
+					{
+						elem: 'p',
+						content: '37 студентов успешно сдали и защитили экзамен. По результатам экзамена и собеседований на второй этап было принято 22 студента. Все они проходят практику в реальных командах Яндекса, разрабатывающих интерфейсы для Поиска, Карт, Маркета, Почты и других сервисов. Следующий набор ожидается летом 2014 года. Следите за нашими новостями.'
+					}
+			],
+			width: 450,
+			height: 254,
+			link: 'http://video.yandex.ru/iframe/ya-events/ck9pq8zckh.3409/'
+		}
+		//собираем content
+		var element         = document.getElementById("content");
+		var cpl_content     = yr.run('text_media', data);
+		element.innerHTML   = cpl_content;		
+
+		return false;
+	}
+	</script>
+</body>
+</html>

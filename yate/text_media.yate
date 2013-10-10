@@ -1,0 +1,30 @@
+module "text_media"
+
+match / {
+	<div class="content-2-col">
+		for .text {
+			display_element()
+   		}
+	</div>
+	<div class="content-2-col">
+		<div class="content-inner-20">
+			<iframe width="{ .width }" height="{ .height }" frameborder="0" src="{ .link }"></iframe>
+		</div>
+	</div>
+}
+func display_list() {
+	<ul>
+		for .* {
+			if (index() > 0){
+				<li>{ . }</li>
+			}
+		}
+	</ul>
+}
+func display_element() {
+    if (.elem == 'p') {
+        <p> { .content } </p>
+    } else {
+    	display_list()
+    }
+}
