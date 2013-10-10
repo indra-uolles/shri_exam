@@ -1,0 +1,25 @@
+<html>
+
+<body>
+
+<div id="res"></div>
+
+<script src = "node_modules/yate/lib/runtime.js"></script>
+
+<script src="hello.js"></script>
+
+<script>
+	var data = { username: 'nop'};
+	var result = yr.run('hello', data);
+	console.log(result);
+	var para=document.createElement("p");
+	var node=document.createTextNode(result);
+	para.appendChild(node);
+
+	var element=document.getElementById("res");
+	element.appendChild(para);
+</script>
+
+</body>
+
+</html>

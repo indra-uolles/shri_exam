@@ -1,0 +1,5 @@
+module "hello"
+
+match / {
+	"Hello, { .username }"
+}
