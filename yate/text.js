@@ -23,25 +23,12 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j1 = [ 0, 'text' ];
 
-    var j2 = [ 0, 'width' ];
-
-    var j3 = [ 0, 'height' ];
-
-    var j4 = [ 0, 'link' ];
-
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<div class=\"" + "half-page" + "\">";
-        r0 += nodeset2xml( ( selectNametest('text', c0, []) ) );
-        r0 += "</div>";
-        r0 += "<div class=\"" + "half-page" + "\">";
-        r0 += "<div class=\"" + "shift-down-20" + "\">";
-        r0 += "<iframe width=\"" + nodeset2attrvalue( ( selectNametest('width', c0, []) ) ) + "\" height=\"" + nodeset2attrvalue( ( selectNametest('height', c0, []) ) ) + "\" frameborder=\"" + "0" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('link', c0, []) ) ) + "\"></iframe>";
-        r0 += "</div>";
-        r0 += "</div>";
+        r0 += " " + nodeset2xml( ( selectNametest('text', c0, []) ) );
 
         return r0;
     };
@@ -57,6 +44,6 @@ var yr = yr || require('yate/lib/runtime.js');
     };
     M.imports = [];
 
-    yr.register('text_media', M);
+    yr.register('text', M);
 
 })();
