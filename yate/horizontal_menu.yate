@@ -1,12 +1,10 @@
 module "horizontal_menu"
 
 match / {
-	<div class="horizontal-menu">
+	<div class="horiz-menu">
 		for .item {
-			<div class="horizontal-menu-item">
-				<span class="menu-item-name">
+			<div class="horiz-menu-item">
 					get_menu_elem()				
-				</span>
 			</div>
    		}
 	</div>

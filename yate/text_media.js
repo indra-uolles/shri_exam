@@ -53,7 +53,9 @@ var yr = yr || require('yate/lib/runtime.js');
         if ((cmpSN("p", selectNametest('elem', c0, [])))) {
             r0 += "<p>" + " " + nodeset2xml( ( selectNametest('content', c0, []) ) ) + " " + "</p>";
         } else {
-            r0 += m.f('f0', c0, i0, l0, a0);
+            if ((cmpSN("unordered_list", selectNametest('elem', c0, [])))) {
+                r0 += m.f('f0', c0, i0, l0, a0);
+            }
         }
 
         return r0;
@@ -74,15 +76,15 @@ var yr = yr || require('yate/lib/runtime.js');
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<div class=\"" + "content-2-col" + "\">";
+        r0 += "<div class=\"" + "half-page" + "\">";
         var items0 = selectNametest('text', c0, []);
         for (var i1 = 0, l1 = items0.length; i1 < l1; i1++) {
             var c1 = items0[ i1 ];
             r0 += m.f('f1', c1, i1, l1, a0);
         }
         r0 += "</div>";
-        r0 += "<div class=\"" + "content-2-col" + "\">";
-        r0 += "<div class=\"" + "content-inner-20" + "\">";
+        r0 += "<div class=\"" + "half-page" + "\">";
+        r0 += "<div class=\"" + "shift-down-20" + "\">";
         r0 += "<iframe width=\"" + nodeset2attrvalue( ( selectNametest('width', c0, []) ) ) + "\" height=\"" + nodeset2attrvalue( ( selectNametest('height', c0, []) ) ) + "\" frameborder=\"" + "0" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('link', c0, []) ) ) + "\"></iframe>";
         r0 += "</div>";
         r0 += "</div>";

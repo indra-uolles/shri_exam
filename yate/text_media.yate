@@ -1,13 +1,13 @@
 module "text_media"
 
 match / {
-	<div class="content-2-col">
+	<div class="half-page">
 		for .text {
 			display_element()
    		}
 	</div>
-	<div class="content-2-col">
-		<div class="content-inner-20">
+	<div class="half-page">
+		<div class="shift-down-20">
 			<iframe width="{ .width }" height="{ .height }" frameborder="0" src="{ .link }"></iframe>
 		</div>
 	</div>
@@ -25,6 +25,8 @@ func display_element() {
     if (.elem == 'p') {
         <p> { .content } </p>
     } else {
-    	display_list()
+    	if (.elem == 'unordered_list') {
+    		display_list()
+    	}
     }
 }

@@ -1,159 +1,152 @@
-	body{
-  		margin:0; /*reset*/
-	}
-	ul.people{
-		padding: 0;/*докладчики сдвигались из-за дефолтных настроек*/
-	}
-	.people-description ul li {
-		padding:0;
-		margin-left:220px;
-	}
-	html,body {
-		height: 100%; /* задаем высоту тела документа */
-		overflow: auto;
-	}
-	.wrap {
-		min-height: 100%;
-		/* equal to footer height */
-		margin-bottom: -40px; 
-	}
-	.wrap:after {
-		content: "";
-		display: block;
-	}
-	.footer, .wrap:after {
-		height: 40px; 
-		clear:both;
-		padding-left:20px;
-	}
-	.header{
-		position:fixed;
-		top:0; left:0; right:0;
-		height:100px;
-		padding:20px;
-		width:100%;
-		background-color:white;
-		-webkit-box-shadow: 0px 2px 4px rgba(50, 50, 50, 0.4);
-		-moz-box-shadow:    0px 2px 4px rgba(50, 50, 50, 0.4);
-		box-shadow:         0px 2px 4px rgba(50, 50, 50, 0.4);
-		z-index:2;
-	}
-	body{
-		font-family: Helvetica, Arial, sans-serif;
-		position:absolute;
-		top:0; left:0; right:0;
-		min-width:800px;
-	}
-	.content{
-		padding-top:140px;
-		width: 90%;
-		padding-left:20px;
-	}
-	.content-2-col{
-		width:50%;
-		float:left;
-	}
-	.content-col{
-		padding-right:5%;
-		float:left;
-	}
-	.alumni-container{
-		float:left;
-		max-width:600px;
-		padding-right:20px;
-	}
-	.teacher-container{
-		float:left;
-		max-width:200px;
-	}
-	p.icons-container{
-    	margin-bottom:0px;
-	}
-	img.icon{
-		padding-right:2%;
-	}
-	.alumni-container > img {
-		border:1px solid #CCCCCC;
-	}
-	.content-inner-20{
-		margin:20px;
-	}
-	.logo-name{
-		font-size: 2em;
-		white-space:nowrap;
-	}
-	.when-where{
-		font-size: 0.8em;
-		white-space:nowrap;
-	}
-	.horizontal-menu{
-		width:100%;
-		min-width:800px;
-		white-space:nowrap;
-	}
-	.logo{
-		height:80px; /*в разных браузерах текст лого разной высоты из-за шрифтов em, горизонтальное меню скакало*/
-	}
-	.horizontal-menu-item{
-		display: inline-block;
-		padding-right:5%;
-		white-space:nowrap;
-	}
-	.horizontal-menu-item-small{
-		display: inline-block;
-		padding-right:2%;
-		white-space:nowrap;
-	}
-	.people-sticker-inner img{
-		width:9em;
-		height:auto;
-		border:1px solid #CCCCCC;
-		background-color:white;
-		-webkit-box-shadow: 0px 2px 4px rgba(50, 50, 50, 0.4);
-		-moz-box-shadow:    0px 2px 4px rgba(50, 50, 50, 0.4);
-		box-shadow:         0px 2px 4px rgba(50, 50, 50, 0.4);
-	}
-	a:link{
-		text-decoration:none;
-		color:#6699FF;
-	}
-	a:hover{
-		color:#3333FF;
-	}
-	.people-stickers-outer {
-		list-style-type: none;
-	}
-	.people-sticker-inner {
-		display: block;
-		float: left;
-		padding-right:5%;
-		text-align: left;
-		text-decoration: none;
-		position: relative;
-		line-width:15em;
-	}
-	p.yandex{
-		color:black;
-	}
-	p.yandex:first-letter
-	{ 
-		color:red;
-	}
-	p.yandex:hover{
-		color:red;
-	}
-	.hidden_media, .not_hidden_media{
-		position:absolute;
-		left:20px;
-		padding-top:20px;
-	}
-	.hidden_media{
-		visibility:hidden;
-        opacity:0;
-        transition:visibility 0s linear 0.5s,opacity 0.5s linear;
-	}
-	.not_hidden_media{
-		.not_hidden_media {
-        visibility:visible;
-        opacity:1;
-	}
+/* общие стили для всех страниц */
+
+html,body {
+  height: 100%;
+  overflow: auto; }
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  left: 0;
+  margin: 0;
+  min-width: 800px;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.header {
+  background: #FFF;
+  height: 100px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
+
+.wrap {
+  margin-bottom: -40px;
+  min-height: 100%; }
+ 
+  .wrap:after {
+    content: "";
+    display: block; }
+ 
+.footer,.wrap:after {
+  clear: both;
+  height: 40px;
+  padding-left: 20px; }
+ 
+.content {
+  padding-left: 20px;
+  padding-top: 140px;
+  width: 90%; }
+
+.logo { height: 80px; }
+
+.logo-name {
+  font-size: 2em;
+  white-space: nowrap; }
+ 
+.when-where {
+  font-size: .8em;
+  white-space: nowrap; }
+
+.horiz-menu {
+  min-width: 800px;
+  white-space: nowrap;
+  width: 100%; }
+ 
+.horiz-menu-item, .horiz-menu-item-small {
+  display: inline-block;
+  white-space: nowrap; }
+
+.horiz-menu-item {  
+  padding-right: 5%; }
+ 
+.horiz-menu-item-small {
+  padding-right: 2%; }
+
+a:link {
+  color: #69F;
+  text-decoration: none; }
+ 
+a:hover { color: #33F; }
+
+/* стили, используемые на нескольких разных страницах */
+
+.box {
+  -moz-box-shadow: 0 2px 4px rgba(50,50,50,0.4);
+  -webkit-box-shadow: 0 2px 4px rgba(50,50,50,0.4);
+  box-shadow: 0 2px 4px rgba(50,50,50,0.4); }
+
+.people {
+  padding: 0; 
+  list-style-type: none; }
+
+.people-photo {
+  background: #FFF;
+  border: 1px solid #CCC;
+  width: 9em; }
+ 
+.people-sticker {
+  display: block;
+  float: left;
+  padding-right: 5%;
+  text-align: left;
+  text-decoration: none; }
+
+p.yandex { color: #000; }
+
+p.yandex:first-letter, p.yandex:hover { color: red; }
+
+/* первая страница */
+
+.half-page {
+  float: left;
+  width: 50%; }
+
+.shift-down-20 { margin-top: 20px; }
+
+/* страница программы */
+
+.one-multi-col {
+  float: left;
+  padding-right: 5%; }
+
+/* личная страница выпускника */
+ 
+.alumni-container {
+  float: left;
+  max-width: 600px;
+  padding-right: 20px; }
+ 
+.icons-container { margin-bottom: 20px; }
+ 
+.icon { padding-right: 2%; }
+ 
+.alumni-photo { border: 1px solid #CCC; }
+
+/* страница лекции */
+
+.shift-right-list-elem-220 {
+  margin-left: 220px;
+}
+
+.teacher-container {
+  float: left;
+  max-width: 200px; }
+
+/* аккордеон на странице лекции */
+ 
+.hidden, .visible {
+  left: 20px;
+  padding-top: 20px;
+  position: absolute; }
+ 
+.hidden {
+  opacity: 0;
+  transition: visibility 0 linear .5s .5s linear;
+  visibility: hidden; }
+ 
+.visible {
+  opacity: 1;
+  visibility: visible; }

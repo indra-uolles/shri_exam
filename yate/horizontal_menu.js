@@ -48,14 +48,12 @@ var yr = yr || require('yate/lib/runtime.js');
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<div class=\"" + "horizontal-menu" + "\">";
+        r0 += "<div class=\"" + "horiz-menu" + "\">";
         var items0 = selectNametest('item', c0, []);
         for (var i1 = 0, l1 = items0.length; i1 < l1; i1++) {
             var c1 = items0[ i1 ];
-            r0 += "<div class=\"" + "horizontal-menu-item" + "\">";
-            r0 += "<span class=\"" + "menu-item-name" + "\">";
+            r0 += "<div class=\"" + "horiz-menu-item" + "\">";
             r0 += m.f('f0', c1, i1, l1, a0);
-            r0 += "</span>";
             r0 += "</div>";
         }
         r0 += "</div>";

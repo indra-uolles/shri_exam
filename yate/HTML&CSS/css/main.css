@@ -127,12 +127,13 @@ p.yandex:first-letter, p.yandex:hover { color: red; }
 
 /* страница лекции */
 
-.shift-right-list-elem-220 {
-  margin-left: 220px;
+.shift-right-list-elem-240 {
+  margin-left: 240px;
 }
 
 .teacher-container {
   float: left;
+  margin-right: 20px;
   max-width: 200px; }
 
 /* аккордеон на странице лекции */
@@ -140,7 +141,8 @@ p.yandex:first-letter, p.yandex:hover { color: red; }
 .hidden, .visible {
   left: 20px;
   padding-top: 20px;
-  position: absolute; }
+  position: absolute; 
+}
  
 .hidden {
   opacity: 0;
