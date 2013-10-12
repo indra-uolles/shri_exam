@@ -1,0 +1,11 @@
+module "lecture"
+
+match / {
+	for .item {
+		if ("{ .name }" == "HTTP протокол"){
+			"yes"
+		} else{
+			"no"
+		}
+    }
+}

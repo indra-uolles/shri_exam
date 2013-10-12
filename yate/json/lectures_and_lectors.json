@@ -1,0 +1,138 @@
+﻿[
+    {
+        "name": "HTTP-протокол",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1328/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/w2b30qpu64.4923/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26497696",
+		"teacher_name": "Алексей Бережной",
+        "photo_url": "/img/lectors/365x365 (1).jpeg"
+    }, 
+    {
+        "name": "Регулярные выражения",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1344/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/x79ax18q9w.3802/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26502148",
+        "teacher_name": "Алексей Бережной",
+        "photo_url": "/img/lectors/365x365 (1).jpeg"
+    },
+    {
+        "name": "Вводная по ШРИ",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1286/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/r29oly6fy4.4720/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26263315",
+        "teacher_name": "Анна Чеботкевич",
+        "photo_url": "/img/lectors/chebotkevich.jpeg"
+    },
+    {
+        "name": "Командная строка Unix",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1292/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/yc39l9dh0a.4723/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26263542",
+        "teacher_name": "Виктор Ашик",
+        "photo_url": "/img/lectors/1b09040.jpg"
+    },
+    {
+        "name": "Механизм работы браузера",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1329/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/sg6f9vxh4h.7140/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": null,
+        "teacher_name": "Георгий Мостоловица",
+        "photo_url": "/img/lectors/365x365 (2).jpeg"
+    },
+    {
+        "name": "Архитектура веб-сервисов",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1345/",
+        "video_url": null,
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26503527",
+        "teacher_name": "Денис Бугарчев",
+        "photo_url": "/img/lectors/365x365 (4).jpeg"
+    },
+    {
+        "name": "Языки программирования",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1340/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/uery0fxkg2.7247/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26501860",
+        "teacher_name": "Денис Бугарчев",
+        "photo_url": "/img/lectors/365x365 (4).jpeg"
+    },
+    {
+        "name": "История успеха выпускников ШРИ",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1288/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/vnsrv1de6g.4103/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": null,
+        "teacher_name": "Дмитрий Поляков",
+        "photo_url": null
+    },
+    {
+        "name": "Кеширование на клиенте и сервере",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1330/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/0tk8ubi12b.7216/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26501207",
+        "teacher_name": "Евгений Дорошенко",
+        "photo_url": "/img/lectors/doroshenko.jpg"
+    },
+    {
+        "name": "Изучение и редактирование кода",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1293/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/nvby8zm0d8.3121/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26263503",
+        "teacher_name": "Игорь Новак",
+        "photo_url": "/img/lectors/novak.jpg"
+    },
+    {
+        "name": "Тестирование",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1326/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/u7neb4ukb7.4729/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26495249",
+        "teacher_name": "Марина Широчкина",
+        "photo_url": "/img/lectors/365x365 (8).jpeg"
+    }, 
+    {
+        "name": "Общий цикл разработки (dev-cycle)",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1289/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/u7myq83g9q.4811/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26263573",
+        "teacher_name": "Михаил Трошев",
+        "photo_url": "/img/lectors/troshev.jpeg"
+    },
+    {
+        "name": "Развертывание верстки",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1327/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/gmhj6jhjbq.7339/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26497344",
+        "teacher_name": "Роман Андриади",
+        "photo_url": "/img/lectors/365x365 (9).jpeg"
+    },
+    {
+        "name": "Системы контроля версий",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1321/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/oeunffeksq.5100/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": null,
+        "teacher_name": "Сергей Сергеев",
+        "photo_url": "/img/lectors/365x365 (11).jpeg"
+    },
+    {
+        "name": "Вики-синтаксис",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1291/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/mifh2zd4xw.7143/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26263370",
+        "teacher_name": "Сергей Черкасов",
+        "photo_url": "/img/lectors/cherkasov.jpeg"
+    }, 
+    {
+        "name": "Документирование информации",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1290/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/hlgkkpcf67.3822/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": null,
+        "teacher_name": "Сергей Черкасов",
+        "photo_url": "/img/lectors/cherkasov.jpeg"
+    },
+    {
+        "name": "Безопасность веб-приложений",
+        "url": "http://tech.yandex.ru/events/shri/msk-2013/talks/1337/",
+        "video_url": "http://video.yandex.ru/iframe/ya-events/4fcm2v836x.2020/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1",
+        "slides_url": "http://www.slideshare.net/slideshow/embed_code/26501715",
+        "teacher_name": "Тарас Иващенко",
+        "photo_url": "/img/lectors/365x365 (13).jpeg"
+    }
+]
