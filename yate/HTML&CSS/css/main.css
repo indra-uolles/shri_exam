@@ -138,17 +138,18 @@ p.yandex:first-letter, p.yandex:hover { color: red; }
 
 /* аккордеон на странице лекции */
  
-.hidden, .visible {
-  left: 20px;
-  padding-top: 20px;
-  position: absolute; 
-}
+.visible, .hidden {
+  margin-top: 20px; }
+  
+.visible {
+  display: block; }
  
 .hidden {
-  opacity: 0;
-  transition: visibility 0 linear .5s .5s linear;
-  visibility: hidden; }
- 
-.visible {
-  opacity: 1;
-  visibility: visible; }
+  display: none; }
+
+#presentation:{
+  z-index: 1;
+}
+#video {
+  z-index: 2;
+}

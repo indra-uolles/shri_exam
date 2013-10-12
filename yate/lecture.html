@@ -13,10 +13,8 @@
 	<script src="logo.js"></script>
 	<script src="horizontal_menu.js"></script>
 	<script src="lecture.js"></script>
-	<script src="json-minified.js"></script>
+	<script type="text/javascript" src="jspath.min.js"></script>
 	<script>
-		window.onload = function(){
-
 			//получаем логотип
 			var data          = { logo_name: 'Яндекс ШРИ в Москве 2013', when_where: '7 сентября - 31 декабря'};
 			var cpl_logo        = yr.run('logo', data);
@@ -37,55 +35,57 @@
 			header.innerHTML = cpl_logo  + cpl_menu;
 
 			var x = new XMLHttpRequest(); 
-			x.open("GET","./json/lectures_and_lectors.json",false); 
+			x.open("GET","./json/lectures.json",false); 
 			x.send(); 
 			lectures=x.responseText; 
 
-			//вроде бы мы получаем файл из своего домена, так что нет необходимости блюсти безопасность 
-			//и использовать более безопасную библиотеку json-sans-eval. или нет?
-			var lectures_obj = eval("(" + lectures + ')');
+			var lectures_arr = JSON.parse(lectures);
+			lecture = JSPath.apply('.lectures{.id === 8}', lectures_arr)[0];
 
 			var content     = document.getElementById("content");
-			var cpl_content        = yr.run('lecture', lectures_obj);
+			var cpl_content        = yr.run('lecture', lecture);
 			content.innerHTML = cpl_content;
+	</script>
+	<script>
+		window.onload = function(){
 
-			// var present_link = document.getElementById("show_hide_present");
-			// var video_link = document.getElementById("show_hide_video");
-			// var video = document.getElementById("video");
-			// var presentation = document.getElementById("presentation");
-			// present_link.onclick = function (){
+			var present_link = document.getElementById("show_hide_present");
+			var video_link = document.getElementById("show_hide_video");
+			var video = document.getElementById("video");
+			var presentation = document.getElementById("presentation");
+			present_link.onclick = function (){
 
-			//     if (video.className != 'hidden'){
-			//       	video.className = 'hidden';
-			//       	video_link.innerHTML = 'Показать видео';
-			//     }
-			//     if (presentation.className != 'visible'){
-			//     	presentation.className = 'visible';
-			//       	present_link.innerHTML = 'Cкрыть презентацию';
-			//     }
-			//     else{
-			//    		presentation.className = 'hidden';
-			//     	present_link.innerHTML = 'Показать презентацию';
-			//   	}
+			    if (video.className != 'hidden'){
+			      	video.className = 'hidden';
+			      	video_link.innerHTML = 'Показать видео';
+			    }
+			    if (presentation.className != 'visible'){
+			    	presentation.className = 'visible';
+			      	present_link.innerHTML = 'Cкрыть презентацию';
+			    }
+			    else{
+			   		presentation.className = 'hidden';
+			    	present_link.innerHTML = 'Показать презентацию';
+			  	}
 
-			//   	return false;
-			// }
-			// video_link.onclick = function (){
+			  	return false;
+			}
+			video_link.onclick = function (){
 
-			//     if (presentation.className != 'hidden'){
-			//         presentation.className = 'hidden';
-			//         present_link.innerHTML = 'Показать презентацию';
-			//     }
-			//     if (video.className != 'visible'){
-			//         video.className = 'visible';
-			//         video_link.innerHTML = 'Скрыть видео';
-			//     }
-			//     else{
-			//     	video.className = 'hidden';
-			//         video_link.innerHTML = 'Показать видео';
-			//     }
-			//     return false;
-			// }
+			    if (presentation.className != 'hidden'){
+			        presentation.className = 'hidden';
+			        present_link.innerHTML = 'Показать презентацию';
+			    }
+			    if (video.className != 'visible'){
+			        video.className = 'visible';
+			        video_link.innerHTML = 'Скрыть видео';
+			    }
+			    else{
+			    	video.className = 'hidden';
+			        video_link.innerHTML = 'Показать видео';
+			    }
+			    return false;
+			}
 		}
 	</script>
 	<div class="footer">

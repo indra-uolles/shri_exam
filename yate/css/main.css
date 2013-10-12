@@ -94,6 +94,8 @@ a:hover { color: #33F; }
   text-align: left;
   text-decoration: none; }
 
+.alumni-photo { border: 1px solid #CCC; }
+
 p.yandex { color: #000; }
 
 p.yandex:first-letter, p.yandex:hover { color: red; }
@@ -122,8 +124,6 @@ p.yandex:first-letter, p.yandex:hover { color: red; }
 .icons-container { margin-bottom: 20px; }
  
 .icon { padding-right: 2%; }
- 
-.alumni-photo { border: 1px solid #CCC; }
 
 /* страница лекции */
 
@@ -133,17 +133,24 @@ p.yandex:first-letter, p.yandex:hover { color: red; }
 
 .teacher-container {
   float: left;
-  max-width: 200px; 
-  margin-right: 20px ;}
+  margin-right: 20px;
+  max-width: 200px; }
 
 /* аккордеон на странице лекции */
-
+ 
 .visible, .hidden {
-  margin-top: 20px; 
-  margin-bottom: 20px; }
+  margin-top: 20px; }
   
 .visible {
   display: block; }
  
 .hidden {
   display: none; }
+
+#presentation {
+  z-index: 1;
+  margin-bottom: 5px; }
+
+#video {
+  z-index: 2;
+}
