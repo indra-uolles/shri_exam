@@ -1,0 +1,159 @@
+/* общие стили для всех страниц */
+
+html,body {
+  height: 100%;
+  overflow: auto; }
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  left: 0;
+  margin: 0;
+  min-width: 800px;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.header {
+  background: #FFF;
+  height: 100px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
+
+.wrap {
+  margin-bottom: -40px;
+  min-height: 100%; }
+ 
+  .wrap:after {
+    content: "";
+    display: block; }
+ 
+.footer,.wrap:after {
+  clear: both;
+  height: 40px;
+  padding-left: 20px; }
+ 
+.content {
+  padding-left: 20px;
+  padding-top: 140px;
+  width: 90%; }
+
+.logo { height: 80px; }
+
+.logo-name {
+  font-size: 2em;
+  white-space: nowrap; }
+ 
+.when-where {
+  font-size: .8em;
+  white-space: nowrap; }
+
+.horiz-menu {
+  min-width: 800px;
+  white-space: nowrap;
+  width: 100%; }
+ 
+.horiz-menu-item, .horiz-menu-item-small {
+  display: inline-block;
+  white-space: nowrap; }
+
+.horiz-menu-item {  
+  padding-right: 5%; }
+ 
+.horiz-menu-item-small {
+  padding-right: 2%; }
+
+a:link {
+  color: #69F;
+  text-decoration: none; }
+ 
+a:hover { color: #33F; }
+
+/* стили, используемые на нескольких разных страницах */
+
+.box {
+  -moz-box-shadow: 0 2px 4px rgba(50,50,50,0.4);
+  -webkit-box-shadow: 0 2px 4px rgba(50,50,50,0.4);
+  box-shadow: 0 2px 4px rgba(50,50,50,0.4); }
+
+.people {
+  padding: 0; 
+  list-style-type: none; }
+
+.people-photo {
+  background: #FFF;
+  border: 1px solid #CCC;
+  max-width: 9em; 
+  max-height: 9em;}
+ 
+.people-sticker {
+  display: block;
+  float: left;
+  padding-right: 5%;
+  text-align: left;
+  text-decoration: none; }
+
+.alumni-photo { border: 1px solid #CCC; }
+
+p.yandex { color: #000; }
+
+p.yandex:first-letter, p.yandex:hover { color: red; }
+
+/* первая страница */
+
+.half-page {
+  float: left;
+  width: 50%; }
+
+.shift-down-20 { margin-top: 20px; }
+
+/* страница программы */
+
+.one-multi-col {
+  float: left;
+  padding-right: 5%; }
+
+/* личная страница выпускника */
+ 
+.alumni-container {
+  float: left;
+  max-width: 600px;
+  padding-right: 20px; }
+ 
+.icons-container { margin-bottom: 20px; }
+ 
+.icon { 
+  padding-right: 4%;
+  max-width: 40px; }
+
+/* страница лекции */
+
+.shift-right-list-elem-240 {
+  margin-left: 240px;
+}
+
+.teacher-container {
+  float: left;
+  margin-right: 20px;
+  max-width: 200px; }
+
+/* аккордеон на странице лекции */
+ 
+.visible, .hidden {
+  margin-top: 20px; }
+  
+.visible {
+  display: block; }
+ 
+.hidden {
+  display: none; }
+
+#presentation {
+  z-index: 1;
+  margin-bottom: 5px; }
+
+#video {
+  z-index: 2;
+}

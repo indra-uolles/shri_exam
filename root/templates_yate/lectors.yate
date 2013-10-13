@@ -1,0 +1,23 @@
+module "lectors"
+
+match / {
+
+    <ul class="people">
+    for .* {
+    	<a class="people-sticker" href="#">
+	    	display_photo()
+	    	<p class="yandex">
+	    		"{ .item.name }"
+	    	</p>
+	    </a>    		
+    }
+    </ul>
+}
+
+func display_photo(){
+	if (.item.photo_url) {
+		<img src="{ .item.photo_url }" class="people-photo box"/>
+    } else {
+        <img src="./img/lectors/no_photo.png" class="people-photo box"/>
+    }
+}

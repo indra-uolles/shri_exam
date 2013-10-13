@@ -1,0 +1,236 @@
+﻿<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header box" id="header">
+		</div>
+		<div class="content" id="content">
+		</div>
+	</div>
+	<div class="footer">
+		© 2013  ООО «<a href="http://www.yandex.ru">Яндекс</a>»				
+	</div>
+	<script src = "node_modules/yate/lib/runtime.js"></script>
+	<script src="./js/logo.js"></script>
+	<script src="./js/horizontal_menu.js"></script>
+	<script src="./js/multi_column_links.js"></script>
+	<script>
+		window.onload = function(){
+		//получаем логотип
+		var data          = { logo_name: 'Яндекс ШРИ в Москве 2013', when_where: '7 сентября - 31 декабря'};
+		var cpl_logo        = yr.run('logo', data);
+		var header      = document.getElementById("header");
+		//получаем горизонтальное меню
+		data = {
+		    item: [
+		        { link: '#', title: 'О мероприятии'},
+		        { link: '#', title: 'Программа'},
+		        { link: '#', title: 'Докладчики'},
+		        { link: '#', title: 'Правила отбора'},
+		        { link: '#', title: 'FAQ', selected: true},
+		        { link: '#', title: 'Выпускники'}
+		    ]
+		}
+		//собираем header
+		var cpl_menu        = yr.run('horizontal_menu', data);
+		header.innerHTML = cpl_logo  + cpl_menu;
+
+		data = {
+			item: [
+					[
+						{
+							type: 'header',
+							content : 'Инструменты'
+						},				
+						{
+							type:'link',
+							href: '#',
+							title: 'Общий цикл разработки'
+						},
+						{
+							type:'link',
+							href: '#',
+							title: 'Документирование информации'
+						},
+						{
+							type:'link',
+							href: '#',
+							title: 'Вики-синтаксис'
+						},
+						{
+							type:'link',
+							href: '#',
+							title: 'Командная строка Unix'
+						},
+						{
+							type:'link',
+							href: '#',
+							title: 'Изучение и редактирование кода'
+						},
+						{
+							type:'link',
+							href: '#',
+							title: 'Системы контроля версий'
+						},
+						{
+							type:'link',
+							href: '#',
+							title: 'Тестирование'
+						},
+						{
+							type:'link',
+							href: '#',
+							title: 'Деплой'
+						},
+						{
+							type:'link',
+							href: '#',
+							title: 'Debugger'
+						},
+						{
+							type:'link',
+							href: '#',
+							title: 'Profiler'
+						}
+					],
+					[
+						{
+							type: 'header',
+							content : 'Технологии'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'HTTP-протокол'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'Архитектура веб-сервисов'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'Механизм работы браузеров'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'Кэширование на клиенте и сервере'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'Безопасность веб-приложений'
+						},	
+						{
+							type: 'header',
+							content : 'Дизайн'
+						},	
+						{
+							type: 'link',
+							href: '#',
+							title: 'Графика в вебе'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'Дизайн'
+						}		
+					],
+					[
+						{
+							type: 'header',
+							content : 'Фреймворки'
+						},					
+						{
+							type: 'link',
+							href: '#',
+							title: 'jQuery'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'БЭМ. Теория'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'БЭМ. Практика'
+						}
+					],
+					[
+						{
+							type: 'header',
+							content : 'Языки'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'Языки программирования'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'Регулярные выражения'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'CSS: базовые знания'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'Кэширование на клиенте и сервере'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'Безопасность веб-приложений'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'JS: базовые знания'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'Транспорт. Ajax'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'JS. Асинхронность'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'MVC'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'Клиентская оптимизация'
+						},
+						{
+							type: 'link',
+							href: '#',
+							title: 'Шаблонизаторы'
+						}
+					]
+			]
+		}
+
+		var content = document.getElementById("content");
+		//собираем content
+		var cpl_content        = yr.run('multi_column_links', data);
+		content.innerHTML      = cpl_content;
+		return false;
+	}
+	</script>
+</body>
+</html>

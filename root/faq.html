@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header box" id="header">
+		</div>
+		<div class="content" id="content">
+		</div>
+	</div>
+	<div class="footer">
+		© 2013  ООО «<a href="http://www.yandex.ru">Яндекс</a>»				
+	</div>
+	<script src = "node_modules/yate/lib/runtime.js"></script>
+	<script src="./js/logo.js"></script>
+	<script src="./js/horizontal_menu.js"></script>
+	<script src="./js/text.js"></script>
+	<script>
+	window.onload = function(){
+		//получаем логотип
+		var data          = { logo_name: 'Яндекс ШРИ в Москве 2013', when_where: '7 сентября - 31 декабря'};
+		var cpl_logo        = yr.run('logo', data);
+		var header      = document.getElementById("header");
+		//получаем горизонтальное меню
+		data = {
+		    item: [
+		        { link: '#', title: 'О мероприятии'},
+		        { link: '#', title: 'Программа'},
+		        { link: '#', title: 'Докладчики'},
+		        { link: '#', title: 'Правила отбора'},
+		        { link: '#', title: 'FAQ', selected: true},
+		        { link: '#', title: 'Выпускники'}
+		    ]
+		}
+		//собираем header
+		var cpl_menu        = yr.run('horizontal_menu', data);
+		header.innerHTML = cpl_logo  + cpl_menu;
+
+		data = {
+			text: '&lt;p&gt;&lt;strong&gt;Я живу не в Москве, могу ли я принять участие в Школе?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Формат нашей школы предполагает постоянное присутствие слушателей. Если вы готовы самостоятельно переехать в Москву на время обучения, то да. Также вы сможете посмотреть видеозаписи лекций, которые мы выложим после окончания первой части Школы.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Нужно ли что-то платить за обучение?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Нет, не нужно. Школа бесплатная, а во время практики мы даже платим стипендию.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Я не знаю JavaScript, но имею опыт веб-разработки на другом языке (PHP, Ruby, Perl...), смогу ли я попасть в вашу школу?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Мы не готовы учить всему с нуля, поэтому без начальных знаний обучение в Школе невозможно. Попробуйте самостоятельно выполнить задание — вдруг у вас получится.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Я не &#171;студент старших курсов или недавний выпускник вуза&#187;, смогу ли я принять участие в Школе?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Вы можете заполнить анкету, и мы рассмотрим её наравне с другими.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;В какое время проходят занятия?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Занятия теоретического этапа первой ШРИ проходили три раза в неделю:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;вторник с 19:00 до 21:00;&lt;/li&gt;&lt;li&gt;четверг с 19:00 до 21:00;&lt;/li&gt;&lt;li&gt;суббота с 12:00 до 15:00.&lt;/li&gt;&lt;/ul&gt;'
+		};
+
+		var content = document.getElementById("content");
+		//собираем content
+		var cpl_content        = yr.run('text', data);
+		cpl_content 		   = cpl_content.replace(/&amp;lt;/g, '<');
+		cpl_content            = cpl_content.replace(/&amp;gt;/g, '>');
+		content.innerHTML      = cpl_content;
+		return false;
+	}
+	</script>
+</body>
+</html>

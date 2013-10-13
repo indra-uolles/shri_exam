@@ -1,0 +1,23 @@
+module "students"
+
+match / {
+
+    <ul class="people">
+    for .* {
+    	<a class="people-sticker" href="#">
+	    	display_photo()
+	    	<p>
+	    		"{ .first_name } { .last_name }"
+	    	</p>
+	    </a>    		
+    }
+    </ul>
+}
+
+func display_photo(){
+	if (.link_photo) {
+		<img src="{ .link_photo }" class="people-photo box"/>
+    } else {
+        <img src="./img/lectors/no_photo.png" class="people-photo box"/>
+    }
+}

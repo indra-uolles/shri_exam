@@ -1,0 +1,53 @@
+﻿<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header box" id="header">
+		</div>
+		<div class="content" id="content">
+		</div>
+	</div>
+	<div class="footer">
+		© 2013  ООО «<a href="http://www.yandex.ru">Яндекс</a>»	
+	</div>
+	<script src = "node_modules/yate/lib/runtime.js"></script>
+	<script src="./js/logo.js"></script>
+	<script src="./js/horizontal_menu.js"></script>
+	<script type="text/javascript" src="./js/alumni.js"></script>
+	<script type="text/javascript" src="./js/jspath.min.js"></script>
+	<script>
+		//получаем логотип
+		var data          = { logo_name: 'Яндекс ШРИ в Москве 2013', when_where: '7 сентября - 31 декабря'};
+		var cpl_logo        = yr.run('logo', data);
+		var header      = document.getElementById("header");
+		//получаем горизонтальное меню
+		data = {
+		    item: [
+		        { link: '#', title: 'О мероприятии'},
+		        { link: '#', title: 'Программа'},
+		        { link: '#', title: 'Докладчики'},
+		        { link: '#', title: 'Правила отбора'},
+		        { link: '#', title: 'FAQ', selected: true},
+		        { link: '#', title: 'Выпускники'}
+		    ]
+		}
+		//собираем header
+		var cpl_menu        = yr.run('horizontal_menu', data);
+		header.innerHTML = cpl_logo  + cpl_menu;
+
+		var x = new XMLHttpRequest(); 
+		x.open("GET","./json/students.json",false); 
+		x.send(); 
+		students=x.responseText; 
+
+		var students_arr = JSON.parse(students);
+		student = JSPath.apply('.students{.id === 18}', students_arr)[0];
+
+		var content     = document.getElementById("content");
+		var cpl_content        = yr.run('alumni', student);
+		content.innerHTML = cpl_content;
+	</script>
+</body>
+</html>
