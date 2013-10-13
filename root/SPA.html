@@ -1,19 +1,26 @@
-<html>
+﻿<html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<div class="wrap">
 		<div class="header box" id="header">
+
 		</div>
 		<div class="content" id="content">
 		</div>
 	</div>
-	<script src="node_modules/yate/lib/runtime.js"></script>
+	<script src="../node_modules/yate/lib/runtime.js"></script>
 	<script src="./js/logo.js"></script>
 	<script src="./js/horizontal_menu.js"></script>
 	<script src="./js/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="./js/jspath.min.js"></script>
+	<script src="./js/jspath.min.js"></script>
+	<script src="./js/lectors.js"></script>
+	<script src="./js/lectors_filter.js"></script>
+	<script src="./js/text_media.js"></script>
+	<script src="./js/multi_column_links.js"></script>
+	<script src="./js/html_from_json.js"></script>
+	<script src="./js/lecture.js"></script>
 	<script>
 		//получаем логотип
 		var data          = { logo_name: 'Яндекс ШРИ в Москве 2013', when_where: '7 сентября - 31 декабря'};
@@ -21,26 +28,122 @@
 		//получаем горизонтальное меню
 		data = {
 		    item: [
-		        { link: '#', title: 'О мероприятии', selected: true},
-		        { link: '#', title: 'Программа'},
-		        { link: '#', title: 'Докладчики'},
-		        { link: '#', title: 'Правила отбора'},
-		        { link: '#', title: 'FAQ'},
-		        { link: '#', title: 'Выпускники'}
+		        { link: '#', title: 'О мероприятии', id: 'page_index'},
+		        { link: '#', title: 'Программа', id: 'page_lectures'},
+		        { link: '#', title: 'Докладчики', id: 'page_lectors'},
+		        { link: '#', title: 'Правила отбора', id: 'page_rules'},
+		        { link: '#', title: 'FAQ', id: 'page_faq'},
+		        { link: '#', title: 'Выпускники', id: 'page_students'}
 		    ]
 		}
-		var cpl_menu        = yr.run('horizontal_menu', data);
-		//собираем header
+		var cpl_menu = yr.run('horizontal_menu', data);
 
+		//собираем главную страницу
 		$("#header").html(cpl_logo + cpl_menu);
-		//собираем контент
-		//$("#content").load("./pages/index.html");
-		var data = {
-	        "sel_number" : 4,
-    	}
-		$("#content").load("./pages/lectors.html", data );
-		
+		$("#content").load("./pages/index.html");
 
+		//обработка навигации по верхнему меню
+		$('#page_index').on('click', function(){
+			$("#content").load("./pages/index.html");
+		});
+		$('#page_lectures').on('click', function(){
+			var x = new XMLHttpRequest(); 
+		    x.open("GET","/root/json/program.json", false); 
+		    x.send(); 
+		    program = x.responseText;     
+		    var lectures_arr = JSON.parse(program);
+			var cpl_content  = yr.run('multi_column_links', lectures_arr);	
+			$("#content").html('');
+			$("#content").append(cpl_content);
+			$(".one-lecture").on('click', function(){
+				var x = new XMLHttpRequest(); 
+				x.open("GET","./json/lectures.json",false); 
+				x.send(); 
+				var lectures=x.responseText; 
+				var lecture = JSPath.apply('.lectures{.id === ' + this.id + '}', JSON.parse(lectures))[0];
+
+				// Получаем последний сегмент из URL, поскольку именно в нем содержится
+				// id видео, которое нужно плееру
+				var video_url = lecture['video_url'];
+				var url_parts = video_url.split('/'); 
+				lecture.video_storage = url_parts[url_parts.length - 2];
+
+				$("#content").html('');
+				$("#content").append(yr.run('lecture', lecture));
+
+							var present_link = document.getElementById("show_hide_present");
+			var video_link = document.getElementById("show_hide_video");
+			var video = document.getElementById("video");
+			var presentation = document.getElementById("presentation");
+			present_link.onclick = function (){
+
+			    if (video.className != 'hidden'){
+			      	video.className = 'hidden';
+			      	video_link.innerHTML = 'Показать видео';
+			    }
+			    if (presentation.className != 'visible'){
+			    	presentation.className = 'visible';
+			      	present_link.innerHTML = 'Cкрыть презентацию';
+			    }
+			    else{
+			   		presentation.className = 'hidden';
+			    	present_link.innerHTML = 'Показать презентацию';
+			  	}
+
+			  	return false;
+			}
+			video_link.onclick = function (){
+
+			    if (presentation.className != 'hidden'){
+			        presentation.className = 'hidden';
+			        present_link.innerHTML = 'Показать презентацию';
+			    }
+			    if (video.className != 'visible'){
+			        video.className = 'visible';
+			        video_link.innerHTML = 'Скрыть видео';
+			    }
+			    else{
+			    	video.className = 'hidden';
+			        video_link.innerHTML = 'Показать видео';
+			    }
+			    return false;
+			}
+
+				return false;
+			});
+		});
+		$('#page_lectors').on('click', function(){
+			var data = {
+			    item: [
+			        {link: '#', id: '1', class: 'lectors_filter', title: 'Все'},
+			        {link: '#', id: '2', class: 'lectors_filter', title: 'Инструменты'},
+			        {link: '#', id: '3', class: 'lectors_filter', title: 'Технологии'},
+			        {link: '#', id: '4', class: 'lectors_filter', title: 'Языки'},
+			        {link: '#', id: '5', class: 'lectors_filter', title: 'Дизайн'},
+			        {link: '#', id: '6', class: 'lectors_filter', title: 'Фреймворки'}
+			    ]
+			}
+			var cpl_content_filter = yr.run('lectors_filter', data);
+
+			sel_number = 1;
+			$("#content").html('');
+			$("#content").append(cpl_content_filter);
+    		$("#content").append(get_lectors(1));
+
+    		$('.lectors_filter').on('click', function(){
+				$("#people").html(get_lectors(Number(this.id)));
+			});
+		});
+
+		$('#page_rules').on('click', function(){
+			alert('rere');
+		});
+		$('#page_faq').on('click', function(){
+			alert('rere');
+		});
+		$('#page_students').on('click', function(){
+			alert('rere');
+		});
 	</script>
 	<div class="footer">
 		© 2013  ООО «<a href="http://www.yandex.ru">Яндекс</a>»	

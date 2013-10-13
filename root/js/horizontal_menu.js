@@ -21,9 +21,11 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j0 = [ 0, 'link' ];
 
-    var j1 = [ 0, 'title' ];
+    var j1 = [ 0, 'id' ];
 
-    var j2 = [ 0, 'selected' ];
+    var j2 = [ 0, 'title' ];
+
+    var j3 = [ 0, 'selected' ];
 
     // func get_menu_elem() : xml
     M.f0 = function f0(m, c0, i0, l0, a0) {
@@ -33,15 +35,15 @@ var yr = yr || require('yate/lib/runtime.js');
         if (nodeset2boolean( (selectNametest('selected', c0, [])) )) {
             r0 += nodeset2xml( selectNametest('title', c0, []) );
         } else {
-            r0 += "<a href=\"" + nodeset2attrvalue( ( selectNametest('link', c0, []) ) ) + "\">" + nodeset2xml( ( selectNametest('title', c0, []) ) ) + "</a>";
+            r0 += "<a href=\"" + nodeset2attrvalue( ( selectNametest('link', c0, []) ) ) + "\" id=\"" + nodeset2attrvalue( ( selectNametest('id', c0, []) ) ) + "\">" + nodeset2xml( ( selectNametest('title', c0, []) ) ) + "</a>";
         }
 
         return r0;
     };
 
-    var j3 = [ ];
+    var j4 = [ ];
 
-    var j4 = [ 0, 'item' ];
+    var j5 = [ 0, 'item' ];
 
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {

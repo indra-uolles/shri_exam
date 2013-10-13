@@ -21,11 +21,13 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j0 = [ 0, 'link' ];
 
-    var j1 = [ 0, 'title' ];
+    var j1 = [ 0, 'id' ];
 
-    var j2 = [ 0, 'type' ];
+    var j2 = [ 0, 'title' ];
 
-    var j3 = [ 0, 'content' ];
+    var j3 = [ 0, 'type' ];
+
+    var j4 = [ 0, 'content' ];
 
     // func display_element() : xml
     M.f0 = function f0(m, c0, i0, l0, a0) {
@@ -35,17 +37,17 @@ var yr = yr || require('yate/lib/runtime.js');
         if ((cmpSN("header", selectNametest('type', c0, [])))) {
             r0 += "<h4>" + nodeset2xml( ( selectNametest('content', c0, []) ) ) + "</h4>";
         } else {
-            r0 += "<p><a href=\"" + nodeset2attrvalue( ( selectNametest('link', c0, []) ) ) + "\">" + nodeset2xml( ( selectNametest('title', c0, []) ) ) + "</a></p>";
+            r0 += "<p><a href=\"" + nodeset2attrvalue( ( selectNametest('link', c0, []) ) ) + "\" id=\"" + nodeset2attrvalue( ( selectNametest('id', c0, []) ) ) + "\" class=\"" + "one-lecture" + "\">" + nodeset2xml( ( selectNametest('title', c0, []) ) ) + "</a></p>";
         }
 
         return r0;
     };
 
-    var j4 = [ ];
+    var j5 = [ ];
 
-    var j5 = [ 0, 'item' ];
+    var j6 = [ 0, 'item' ];
 
-    var j6 = [ 0, '*' ];
+    var j7 = [ 0, '*' ];
 
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {

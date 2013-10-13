@@ -1,0 +1,218 @@
+{
+		"item": [
+				[
+					{
+						"type": "header",
+						"content" : "Инструменты"
+					},				
+					{
+						"type":"link",
+						"href": "#",
+						"title": "Общий цикл разработки",
+						"id" : 12
+					},
+					{
+						"type":"link",
+						"href": "#",
+						"title": "Документирование информации",
+						"id" : 16
+					},
+					{
+						"type":"link",
+						"href": "#",
+						"title": "Вики-синтаксис",
+						"id" : 15
+					},
+					{
+						"type":"link",
+						"href": "#",
+						"title": "Командная строка Unix",
+						"id" : 4
+					},
+					{
+						"type":"link",
+						"href": "#",
+						"title": "Изучение и редактирование кода",
+						"id" : 10
+					},
+					{
+						"type":"link",
+						"href": "#",
+						"title": "Системы контроля версий",
+						"id" : 14
+					},
+					{
+						"type":"link",
+						"href": "#",
+						"title": "Тестирование",
+						"id" : 11
+					},
+					{
+						"type":"link",
+						"href": "#",
+						"title": "Деплой",
+						"id" : 13
+					},
+					{
+						"type":"link",
+						"href": "#",
+						"title": "Debugger",
+						"id" : 0
+					},
+					{
+						"type":"link",
+						"href": "#",
+						"title": "Profiler",
+						"id" : 0
+					}
+				],
+				[
+					{
+						"type": "header",
+						"content" : "Технологии"
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "HTTP-протокол",
+						"id" : 1
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Архитектура веб-сервисов",
+						"id" : 6
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Механизм работы браузеров",
+						"id" : 5
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Кэширование на клиенте и сервере",
+						"id" : 9
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Безопасность веб-приложений",
+						"id" : 17
+					},	
+					{
+						"type": "header",
+						"content" : "Дизайн"
+					},	
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Графика в вебе",
+						"id" : 0
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Дизайн",
+						"id" : 0
+					}		
+				],
+				[
+					{
+						"type": "header",
+						"content" : "Фреймворки"
+					},					
+					{
+						"type": "link",
+						"href": "#",
+						"title": "jQuery",
+						"id" : 0
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "БЭМ. Теория",
+						"id" : 0
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "БЭМ. Практика",
+						"id" : 0
+					}
+				],
+				[
+					{
+						"type": "header",
+						"content" : "Языки"
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Языки программирования",
+						"id" : 7
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Регулярные выражения",
+						"id" : 2
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "CSS: базовые знания",
+						"id" : 0
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Кэширование на клиенте и сервере",
+						"id" : 0
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Безопасность веб-приложений",
+						"id" : 0
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "JS: базовые знания",
+						"id" : 0
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Транспорт. Ajax",
+						"id" : 0
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "JS. Асинхронность",
+						"id" : 0
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "MVC",
+						"id" : 0
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Клиентская оптимизация",
+						"id" : 0
+					},
+					{
+						"type": "link",
+						"href": "#",
+						"title": "Шаблонизаторы",
+						"id" : 0
+					}
+				]
+		]
+	}

@@ -14,6 +14,6 @@ func display_element() {
     if (.type == 'header') {
         <h4>{ .content }</h4>
     } else {
-    	<p><a href="{ .link }">{ .title }</a></p>
+    	<p><a href="{ .link }" id="{ .id }" class="one-lecture">{ .title }</a></p>
     }
  }

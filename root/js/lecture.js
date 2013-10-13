@@ -87,9 +87,17 @@ var yr = yr || require('yate/lib/runtime.js');
                 return 0;
             }
 
-            var j5 = [ 1, 0, 3, 0, 0, 'video_url' ];
+            var j5 = [ 1, 0, 3, 0, 0, 'video_storage' ];
 
-            r0 += "<object width=\"" + "450" + "\" height=\"" + "361" + "\"><param name=\"" + "src" + "\" value=\"" + nodeset2attrvalue( ( m.s(j5, c0) ) ) + "\"/><param name=\"" + "allowFullScreen" + "\" value=\"" + "true" + "\"/><param name=\"" + "scale" + "\" value=\"" + "noscale" + "\"/><embed src=\"" + nodeset2attrvalue( ( m.s(j5, c0) ) ) + "\" type=\"" + "application/x-shockwave-flash" + "\" width=\"" + "450" + "\" height=\"" + "361" + "\" allowFullScreen=\"" + "true" + "\" scale=\"" + "noscale" + "\"/>" + " " + "</object>";
+            r0 += "<object type=\"" + "application/x-shockwave-flash" + "\" id=\"" + "flash" + "\" data=\"" + "//static.video.yandex.net/custom/" + "\" width=\"" + "1152" + "\" height=\"" + "331" + "\" style=\"" + "display: block !important;" + "\">";
+            r0 += "<param name=\"" + "scale" + "\" value=\"" + "scale" + "\"/>";
+            r0 += "<param name=\"" + "quality" + "\" value=\"" + "high" + "\"/>";
+            r0 += "<param name=\"" + "bgcolor" + "\" value=\"" + "#000000" + "\"/>";
+            r0 += "<param name=\"" + "allowfullscreen" + "\" value=\"" + "true" + "\"/>";
+            r0 += "<param name=\"" + "allowscriptaccess" + "\" value=\"" + "always" + "\"/>";
+            r0 += "<param name=\"" + "wmode" + "\" value=\"" + "opaque" + "\"/>";
+            r0 += "<param name=\"" + "flashvars" + "\" value=\"" + "login=ya-events&amp;storage_directory=" + nodeset2attrvalue( ( m.s(j5, c0) ) ) + "&amp;autostart=no&amp;tnsCount=0&amp;is-hq=true&amp;has-hq=true&amp;show-info=false&amp;show-quality=true&amp;show-logo=false" + "\"/>";
+            r0 += "</object>";
         } else {
             r0 += "Увы, но мы еще не загрузили видео. Скоро загрузим!";
         }
@@ -111,7 +119,7 @@ var yr = yr || require('yate/lib/runtime.js');
 
         r0 += closeAttrs(a0);
         r0 += "<p>";
-        r0 += "<a href=\"" + "#" + "\">" + "Программа(все лекции) &gt; " + "</a>";
+        r0 += "<a href=\"" + "#" + "\" class=\"" + "page_lectures" + "\">" + "Программа(все лекции) &gt; " + "</a>";
         r0 += nodeset2xml( ( m.s(j6, c0) ) );
         r0 += "</p>";
         r0 += "<h3>" + nodeset2xml( ( m.s(j6, c0) ) ) + "</h3>";

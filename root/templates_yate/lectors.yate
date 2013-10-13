@@ -2,7 +2,7 @@ module "lectors"
 
 match / {
 
-    <ul class="people">
+    <ul class="people" id="people">
     for .* {
     	<a class="people-sticker" href="#">
 	    	display_photo()

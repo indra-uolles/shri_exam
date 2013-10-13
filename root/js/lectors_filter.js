@@ -19,25 +19,27 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var M = new yr.Module();
 
-    var j0 = [ 0, 'sel_number' ];
+    var j0 = [ 0, 'link' ];
 
-    // func display_menu_elem(link, title, num) : xml
-    M.f0 = function f0(m, c0, i0, l0, a0, v0, v1, v2) {
+    var j1 = [ 0, 'id' ];
+
+    var j2 = [ 0, 'class' ];
+
+    var j3 = [ 0, 'title' ];
+
+    // func display_element() : xml
+    M.f0 = function f0(m, c0, i0, l0, a0) {
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        if ((cmpSN(( v2 ), selectNametest('sel_number', c0, [])))) {
-            r0 += scalar2xml( v1 );
-        } else {
-            r0 += "<a href=\"" + scalar2attrvalue( ( v0 ) ) + "\">";
-            r0 += scalar2xml( v1 );
-            r0 += "</a>";
-        }
+        r0 += "<a href=\"" + nodeset2attrvalue( ( selectNametest('link', c0, []) ) ) + "\" id=\"" + nodeset2attrvalue( ( selectNametest('id', c0, []) ) ) + "\" class=\"" + nodeset2attrvalue( ( selectNametest('class', c0, []) ) ) + "\">" + nodeset2xml( ( selectNametest('title', c0, []) ) ) + "</a>";
 
         return r0;
     };
 
-    var j1 = [ ];
+    var j4 = [ ];
+
+    var j5 = [ 0, 'item' ];
 
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {
@@ -48,24 +50,13 @@ var yr = yr || require('yate/lib/runtime.js');
         r0 += "<div class=\"" + "horiz-menu-item-small" + "\">";
         r0 += "Докладчики по темам:";
         r0 += "</div>";
-        r0 += "<div class=\"" + "horiz-menu-item-small" + "\">";
-        r0 += m.f('f0', c0, i0, l0, a0, "#", "Все", 1);
-        r0 += "</div>";
-        r0 += "<div class=\"" + "horiz-menu-item-small" + "\">";
-        r0 += m.f('f0', c0, i0, l0, a0, "#", "Инструменты", 2);
-        r0 += "</div>";
-        r0 += "<div class=\"" + "horiz-menu-item-small" + "\">";
-        r0 += m.f('f0', c0, i0, l0, a0, "#", "Технологии", 3);
-        r0 += "</div>";
-        r0 += "<div class=\"" + "horiz-menu-item-small" + "\">";
-        r0 += m.f('f0', c0, i0, l0, a0, "#", "Языки", 4);
-        r0 += "</div>";
-        r0 += "<div class=\"" + "horiz-menu-item-small" + "\">";
-        r0 += m.f('f0', c0, i0, l0, a0, "#", "Дизайн", 5);
-        r0 += "</div>";
-        r0 += "<div class=\"" + "horiz-menu-item-small" + "\">";
-        r0 += m.f('f0', c0, i0, l0, a0, "#", "Фреймворки", 6);
-        r0 += "</div>";
+        var items0 = selectNametest('item', c0, []);
+        for (var i1 = 0, l1 = items0.length; i1 < l1; i1++) {
+            var c1 = items0[ i1 ];
+            r0 += "<div class=\"" + "horiz-menu-item-small" + "\">";
+            r0 += m.f('f0', c1, i1, l1, a0);
+            r0 += "</div>";
+        }
         r0 += "</p>";
 
         return r0;

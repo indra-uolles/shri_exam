@@ -46,7 +46,7 @@ var yr = yr || require('yate/lib/runtime.js');
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<ul class=\"" + "people" + "\">";
+        r0 += "<ul class=\"" + "people" + "\" id=\"" + "people" + "\">";
         var items0 = selectNametest('*', c0, []);
         for (var i1 = 0, l1 = items0.length; i1 < l1; i1++) {
             var c1 = items0[ i1 ];
