@@ -1,0 +1,95 @@
+﻿<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header box" id="header">
+		</div>
+		<div class="content" id="content">
+		</div>
+	</div>
+	<script src = "node_modules/yate/lib/runtime.js"></script>
+	<script src="./js/logo.js"></script>
+	<script src="./js/horizontal_menu.js"></script>
+	<script src="./js/lecture.js"></script>
+	<script type="text/javascript" src="./js/jspath.min.js"></script>
+	<script>
+			//получаем логотип
+			var data          = { logo_name: 'Яндекс ШРИ в Москве 2013', when_where: '7 сентября - 31 декабря'};
+			var cpl_logo        = yr.run('logo', data);
+			var header      = document.getElementById("header");
+			//получаем горизонтальное меню
+			data = {
+			    item: [
+			        { link: '#', title: 'О мероприятии'},
+			        { link: '#', title: 'Программа'},
+			        { link: '#', title: 'Докладчики'},
+			        { link: '#', title: 'Правила отбора'},
+			        { link: '#', title: 'FAQ', selected: true},
+			        { link: '#', title: 'Выпускники'}
+			    ]
+			}
+			//собираем header
+			var cpl_menu        = yr.run('horizontal_menu', data);
+			header.innerHTML = cpl_logo  + cpl_menu;
+
+			var x = new XMLHttpRequest(); 
+			x.open("GET","./json/lectures.json",false); 
+			x.send(); 
+			lectures=x.responseText; 
+
+			var lectures_arr = JSON.parse(lectures);
+			lecture = JSPath.apply('.lectures{.id === 8}', lectures_arr)[0];
+
+			var content     = document.getElementById("content");
+			var cpl_content        = yr.run('lecture', lecture);
+			content.innerHTML = cpl_content;
+	</script>
+	<script>
+		window.onload = function(){
+
+			var present_link = document.getElementById("show_hide_present");
+			var video_link = document.getElementById("show_hide_video");
+			var video = document.getElementById("video");
+			var presentation = document.getElementById("presentation");
+			present_link.onclick = function (){
+
+			    if (video.className != 'hidden'){
+			      	video.className = 'hidden';
+			      	video_link.innerHTML = 'Показать видео';
+			    }
+			    if (presentation.className != 'visible'){
+			    	presentation.className = 'visible';
+			      	present_link.innerHTML = 'Cкрыть презентацию';
+			    }
+			    else{
+			   		presentation.className = 'hidden';
+			    	present_link.innerHTML = 'Показать презентацию';
+			  	}
+
+			  	return false;
+			}
+			video_link.onclick = function (){
+
+			    if (presentation.className != 'hidden'){
+			        presentation.className = 'hidden';
+			        present_link.innerHTML = 'Показать презентацию';
+			    }
+			    if (video.className != 'visible'){
+			        video.className = 'visible';
+			        video_link.innerHTML = 'Скрыть видео';
+			    }
+			    else{
+			    	video.className = 'hidden';
+			        video_link.innerHTML = 'Показать видео';
+			    }
+			    return false;
+			}
+		}
+	</script>
+	<div class="footer">
+		© 2013  ООО «<a href="http://www.yandex.ru">Яндекс</a>»	
+	</div>
+</body>
+</html>

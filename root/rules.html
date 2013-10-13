@@ -1,0 +1,51 @@
+﻿<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header box" id="header">
+		</div>
+		<div class="content" id="content">
+		</div>
+	</div>
+	</div>
+	<div class="footer">
+		© 2013  ООО «<a href="http://www.yandex.ru">Яндекс</a>»	
+	</div>
+	<script src = "node_modules/yate/lib/runtime.js"></script>
+	<script src="./js/logo.js"></script>
+	<script src="./js/horizontal_menu.js"></script>
+	<script src="./js/text.js"></script>
+	<script>
+		//получаем логотип
+		var data          = { logo_name: 'Яндекс ШРИ в Москве 2013', when_where: '7 сентября - 31 декабря'};
+		var cpl_logo        = yr.run('logo', data);
+		var header      = document.getElementById("header");
+		//получаем горизонтальное меню
+		data = {
+		    item: [
+		        { link: '#', title: 'О мероприятии'},
+		        { link: '#', title: 'Программа'},
+		        { link: '#', title: 'Докладчики'},
+		        { link: '#', title: 'Правила отбора'},
+		        { link: '#', title: 'FAQ', selected: true},
+		        { link: '#', title: 'Выпускники'}
+		    ]
+		}
+		//собираем header
+		var cpl_menu        = yr.run('horizontal_menu', data);
+		header.innerHTML = cpl_logo  + cpl_menu;
+
+		//собираем контент
+		data = {
+			text: '&lt;p&gt;&lt;strong&gt;Набор во вторую Школу Разработки Интерфейсов завершён.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Для того, чтобы попасть в Школу, кандидаты должны были заполнить анкету c тремя заданиями. Анкеты без выполненного задания не оценивались. Отбор проходил с 15 августа по 5 сентября. Задания выглядели следующим образом.&lt;/p&gt;&lt;h4&gt;Задание 1.&lt;/h4&gt;&lt;p&gt;Напишите на JavaScript функцию, которая выводит список всех чисел, которые равны сумме факториалов своих цифр. Пример такого числа 4! + 0! + 5! + 8! + 5! = 40585. В качестве ответа на вопрос пришлите ссылку на &lt;a href=&quot;http://jsfiddle.net/&quot;&gt;http://jsfiddle.net/&lt;/a&gt; с вашим кодом или на ваш репозиторий на &lt;a href=&quot;https://github.com/&quot;&gt;https://github.com/&lt;/a&gt;.&lt;/p&gt; &lt;h4&gt;Задание 2.&lt;/h4&gt;&lt;p&gt;Вы — пилот грузового межгалактического корабля. Ваша работа — перевозка грузов с одной планету на другую. Грузоподъемность вашего корабля ограничена, поэтому за один рейс вы можете перевезти не более N кг полезного груза. Ваш корабль умеет сообщать свое состояние (местоположение и степень загруженности), а также летать в любую точку пространства. Каждая планета может содержать на себе груз, который можно взять. Также на каждой планете груз можно оставить.&lt;/p&gt;&lt;p&gt;Даны незавершенные интерфейсы корабля и планеты. Напишите недостающий код. Полное условие задачи доступно на &lt;a href=&quot;https://github.com/yandex-shri/introtask-space&quot;&gt;https://github.com/yandex-shri/introtask-space.&lt;/a&gt;&lt;/p&gt; &lt;p&gt;В качестве ответа на вопрос пришлите ссылку на &lt;a href=&quot;http://jsfiddle.net/&quot;&gt;http://jsfiddle.net/&lt;/a&gt; с вашим кодом или на ваш репозиторий на &lt;a href=&quot;https://github.com/&quot;&gt;https://github.com/&lt;/a&gt;.&lt;/p&gt;&lt;h4&gt;Задание 3.&lt;/h4&gt;&lt;p&gt;Сверстайте форму-анкету с нашими заданиями для кандидатов. Страница должна работать в следующих браузерах: MSIE (8, 9, 10), Google Chrome (26, 27), Firefox (20, 21), Opera (12.15, 12.14), Яндекс.Браузер 1.5. По возможности используйте приёмы безопасной деградации CSS. Страница должна содержать интерактив, реализованный с помощью JS и jQuery.&lt;/p&gt; &lt;p&gt;Это может быть:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;проверка полноты и правильности заполнения полей (где это возможно);&lt;/li&gt;&lt;li&gt;возможность свернуть и развернуть разделы (аккордеон);&lt;/li&gt;&lt;li&gt;индикатор заполнения анкеты;&lt;/li&gt;&lt;li&gt;что-нибудь еще.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Будет плюсом, если вы сверстаете страницу, используя БЭМ.&lt;/p&gt;&lt;h4&gt;Дополнительные задания:&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Выполните задание про форму-анкету, используя один из классических шаблонизаторов: Handlebars, mustache, Dust, Jade и т.п.&lt;/li&gt;&lt;li&gt;Выполните задание про форму-анкету, используя один из экзотических шаблонизаторов: XSLT, YATE, BEMHTML и т.п.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Разработку необходимо вести на &lt;a href=&quot;https://github.com/&quot;&gt;https://github.com/&lt;/a&gt;. В качестве ответа на вопрос пришлите ссылку на проект.&lt;/p&gt;'
+		}
+		var content     = document.getElementById("content");
+		var cpl_content        = yr.run('text', data);
+		cpl_content 		   = cpl_content.replace(/&amp;lt;/g, '<');
+		cpl_content            = cpl_content.replace(/&amp;gt;/g, '>');
+		content.innerHTML = cpl_content;
+	</script>
+</body>
+</html>

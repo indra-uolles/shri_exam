@@ -1,0 +1,39 @@
+module "lectors_filter"
+
+match / {	
+
+	<p>
+		<div class="horiz-menu-item-small">
+			"Докладчики по темам:"
+		</div>
+		<div class="horiz-menu-item-small">
+			display_menu_elem("#", 'Все', 1)
+		</div>
+		<div class="horiz-menu-item-small">
+			display_menu_elem("#", 'Инструменты', 2)
+		</div>
+		<div class="horiz-menu-item-small">
+			display_menu_elem("#", 'Технологии', 3)
+		</div>
+		<div class="horiz-menu-item-small">
+			display_menu_elem("#", 'Языки', 4)
+		</div>
+		<div class="horiz-menu-item-small">
+			display_menu_elem("#", 'Дизайн', 5)
+		</div>
+		<div class="horiz-menu-item-small">
+			display_menu_elem("#", 'Фреймворки', 6)
+		</div>
+	</p>
+
+}
+
+func display_menu_elem(link, title, num){
+	if (.sel_number == '{ num }'){
+		title
+	} else{
+		<a href="{ link }">
+			title
+		</a>
+	}
+}

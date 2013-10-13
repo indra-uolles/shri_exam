@@ -1,0 +1,57 @@
+﻿<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header box" id="header">
+		</div>
+		<div class="content" id="content">
+		</div>
+	</div>
+	<div class="footer">
+		© 2013  ООО «<a href="http://www.yandex.ru">Яндекс</a>»				
+	</div>
+	<script src = "node_modules/yate/lib/runtime.js"></script>
+	<script src="./js/logo.js"></script>
+	<script src="./js/horizontal_menu.js"></script>
+	<script src="./js/text_media.js"></script>
+	<script>
+	window.onload = function(){
+		//получаем логотип
+		var data          = { logo_name: 'Яндекс ШРИ в Москве 2013', when_where: '7 сентября - 31 декабря'};
+		var cpl_logo        = yr.run('logo', data);
+		var element       = document.getElementById("header");
+		//получаем горизонтальное меню
+		data = {
+		    item: [
+		        { link: '#', title: 'О мероприятии'},
+		        { link: '#', title: 'Программа'},
+		        { link: '#', title: 'Докладчики'},
+		        { link: '#', title: 'Правила отбора'},
+		        { link: '#', title: 'FAQ', selected: true},
+		        { link: '#', title: 'Выпускники'}
+		    ]
+		}
+		//собираем header
+		var cpl_menu        = yr.run('horizontal_menu', data);
+		element.innerHTML   = cpl_logo  + cpl_menu;
+
+		data = {
+			text: '&lt;p&gt;На первый этап Второй Школы Разработки интерфейсов было отобрано 39 человек, которые прослушали 31 теоретическую лекцию. Студенты ШРИ узнали про:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;инструменты разработчика интерфейсов;&lt;/li&gt;&lt;li&gt;технологии, используемые в современной фронтенд-разработке;&lt;/li&gt;&lt;li&gt;JavaScript, CSS, XSLT;&lt;/li&gt;&lt;li&gt;виды фреймворков для разработки интерфейсов;&lt;/li&gt;&lt;li&gt;дизайн веб-интерфейсов.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;37 студентов&lt;/strong&gt; успешно сдали и защитили экзамен. По результатам экзамена и собеседований на второй этап было принято &lt;strong&gt;22 студента&lt;/strong&gt;. Все они проходят практику в реальных командах Яндекса, разрабатывающих интерфейсы для Поиска, Карт, Маркета, Почты и других сервисов.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Следующий набор&lt;/strong&gt; ожидается летом 2014 года. Следите за нашими новостями.&lt;/p&gt;',
+			width: 450,
+			height: 254,
+			link: 'http://video.yandex.ru/iframe/ya-events/ck9pq8zckh.3409/'
+		}
+		//собираем content
+		var element         = document.getElementById("content");
+		var cpl_content     = yr.run('text_media', data);
+		cpl_content 		   = cpl_content.replace(/&amp;lt;/g, '<');
+		cpl_content            = cpl_content.replace(/&amp;gt;/g, '>');
+		element.innerHTML   = cpl_content;		
+
+		return false;
+	}
+	</script>
+</body>
+</html>

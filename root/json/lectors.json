@@ -1,0 +1,188 @@
+{"lectors": 
+    [
+        {
+            "lector": 
+            {
+                "item": 
+                    [{
+                        "name": "Алексей Бережной",
+                        "about": "До Яндекса занимался разработкой браузерной MMORPG. С 2011 года работает над интерфейсом Яндекс.Директа.",
+                        "photo_url": "./img/lectors/aberezh.jpeg"
+                    }]
+            },
+            "instruments" : 0,
+            "technologies": 1,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 1
+        }, {
+            "lector": 
+            {
+                "item": [
+                    {"name": "Анна Чеботкевич"},
+                    {"about": null},
+                    {"photo_url": "./img/lectors/chebotkevich.jpg"}
+                ]
+            },
+            "instruments" : 0,
+            "technologies": 1,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        }, {
+            "lector": 
+            {
+                "item": [
+                    {"name": "Виктор Ашик"},
+                    {"about": null},
+                    {"photo_url": "./img/lectors/365x365 (3).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        }, {
+            "lector": 
+            {
+                "item": [
+                    {"name": "Георгий Мостоловица"},
+                    {"about": "Веб-разработчик. В Яндексе занимается ускорением фронтенда Поиска."},
+                    {"photo_url": "./img/lectors/365x365 (2).jpeg"}
+                ]
+            },
+            "instruments" : 0,
+            "technologies": 1,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Денис Бугарчев"},
+                    {"about": "Верстальщик, разработчик веб-интерфейсов, автор подкаста о веб-разработке «Сделайте мне красиво!»."},
+                    {"photo_url": "./img/lectors/365x365 (4).jpeg"}
+                ]
+            },
+            "instruments" : 0,
+            "technologies": 1,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 1
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Дмитрий Поляков"},
+                    {"about": null},
+                    {"photo_url": "./img/lectors/365x365 (5).jpeg"}
+                ]
+            },
+            "instruments" : 0,
+            "technologies": 1,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Игорь Новак"},
+                    {"about": "Разработчик интерфейсов"},
+                    {"photo_url": "./img/lectors/365x365 (7).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Марина Широчкина"},
+                    {"about": "Занимается тестированием уже девять лет. В Яндексе с 2007 года. Последний год работает в группе производительности интерфейсов."},
+                    {"photo_url": "./img/lectors/365x365 (8).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Михаил Трошев"},
+                    {"about": "null"},
+                    {"photo_url": "./img/lectors/365x365 (10).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Роман Андриади"},
+                    {"about": "Работает в департаменте эксплуатации Яндекса с 2005 года. С 2010 года —руководитель группы администрирования коммуникационных, контент- и внутренних сервисов."},
+                    {"photo_url": "./img/lectors/365x365 (9).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Сергей Сергеев"},
+                    {"about": "Профессионально занимается разработкой уже более 10 лет, из них 5 в Яндексе."},
+                    {"photo_url": "./img/lectors/365x365 (11).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0 
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Сергей Черкасов"},
+                    {"about": null},
+                    {"photo_url": "./img/lectors/365x365 (12).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0 
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Тарас Иващенко"},
+                    {"about": "Администратор информационной безопасности в Яндексе. Специалист по информационной безопасности, проповедник свободного программного обеспечения, участник проектов w3af и OWASP."},
+                    {"photo_url": "./img/lectors/365x365 (13).jpeg"}
+                ]
+            },
+            "instruments" : 0,
+            "technologies": 1,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0 
+        }
+    ]
+}
