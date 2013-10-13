@@ -1,0 +1,43 @@
+<script type="text/javascript" src="./js/lectors.js"></script>
+<script type="text/javascript" src="./js/lectors_filter.js"></script>
+<script>
+$(function() {
+
+    var x = new XMLHttpRequest(); 
+    x.open("GET","/root/json/lectors.json",false); 
+    x.send(); 
+    lectors = x.responseText;     
+    var lectors_arr = JSON.parse(lectors);
+    var filtered_lectors_arr;
+
+    sel_number = parseInt(data.sel_number);
+    theme = '';
+    if (sel_number === 2){
+        theme = 'instruments';
+    } else if (sel_number === 3) {
+        theme = 'technologies'
+    } else if (sel_number === 4) {
+        theme = 'languages';
+    } else if (sel_number === 5) {
+        theme = 'design';
+    } else {
+        theme = 'frameworks'
+    }
+
+    if (sel_number > 1){
+        query_str = '.lectors{.' + theme + '==1}.lector';
+        filtered_lectors_arr = JSPath.apply(query_str, lectors_arr);
+    } else{ 
+     filtered_lectors_arr = lectors_arr; 
+    }
+
+    var cpl_content_filter = yr.run('lectors_filter', data);
+    var cpl_content = yr.run('lectors', filtered_lectors_arr);
+    $("#index-body").html(cpl_content_filter + cpl_content);
+
+});
+</script>
+
+<div id="index-body">
+
+</div>

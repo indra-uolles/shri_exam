@@ -1,0 +1,22 @@
+<script src="./js/text_media.js"></script>
+<script>
+$(function() {
+    data = {
+        text: '&lt;p&gt;На первый этап Второй Школы Разработки интерфейсов было отобрано 39 человек, которые прослушали 31 теоретическую лекцию. Студенты ШРИ узнали про:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;инструменты разработчика интерфейсов;&lt;/li&gt;&lt;li&gt;технологии, используемые в современной фронтенд-разработке;&lt;/li&gt;&lt;li&gt;JavaScript, CSS, XSLT;&lt;/li&gt;&lt;li&gt;виды фреймворков для разработки интерфейсов;&lt;/li&gt;&lt;li&gt;дизайн веб-интерфейсов.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;37 студентов&lt;/strong&gt; успешно сдали и защитили экзамен. По результатам экзамена и собеседований на второй этап было принято &lt;strong&gt;22 студента&lt;/strong&gt;. Все они проходят практику в реальных командах Яндекса, разрабатывающих интерфейсы для Поиска, Карт, Маркета, Почты и других сервисов.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Следующий набор&lt;/strong&gt; ожидается летом 2014 года. Следите за нашими новостями.&lt;/p&gt;',
+        width: 450,
+        height: 254,
+        link: 'http://video.yandex.ru/iframe/ya-events/ck9pq8zckh.3409/'
+    };
+
+
+    var compiled_body = yr.run('text_media', data);
+    compiled_body = compiled_body.replace(/&amp;lt;/g, '<');
+    compiled_body = compiled_body.replace(/&amp;gt;/g, '>');
+    $("#index-body").html(compiled_body);
+
+});
+</script>
+
+<div id="index-body">
+
+</div>
