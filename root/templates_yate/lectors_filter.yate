@@ -1,0 +1,18 @@
+module "lectors_filter"
+
+match / {	
+	<p>
+	<div class="horiz-menu-item-small">
+		"Докладчики по темам:"
+	</div>
+	for .item {
+		<div class="horiz-menu-item-small">
+			display_element()
+		</div>
+	}
+	</p>
+}
+
+func display_element(){
+    <a href="{ .link }" id="{ .id }" class="{ .class }">{ .title }</a>
+}

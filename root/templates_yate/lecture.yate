@@ -1,0 +1,66 @@
+﻿module "lecture"
+
+match / {
+	display_element()
+}
+
+func display_photo(){
+	if (.[0].photo_url) {
+		<img src="{ .[0].photo_url }" class="people-photo box"/>
+    } else {
+        <img src="./img/lectors/no_photo.png" class="people-photo box"/>
+    }
+}
+
+func display_presentation(){
+	if (.[0].slides_url) {
+        <iframe src="{ .[0].slides_url }" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="true"></iframe>
+    } else {
+        "Увы, но мы еще не загрузили презентацию. Скоро загрузим!"
+    }
+}
+
+func display_video(){
+	if (.[0].video_url) {
+    <object type="application/x-shockwave-flash" id="flash" data="//static.video.yandex.net/custom/" width="1152" height="331" style="display: block !important;">
+      <param name="scale" value="scale" />
+      <param name="quality" value="high" />
+      <param name="bgcolor" value="#000000" />
+      <param name="allowfullscreen" value="true" />
+      <param name="allowscriptaccess" value="always" />
+      <param name="wmode" value="opaque" />
+      <param name="flashvars" value="login=ya-events&amp;storage_directory={ .[0].video_storage }&amp;autostart=no&amp;tnsCount=0&amp;is-hq=true&amp;has-hq=true&amp;show-info=false&amp;show-quality=true&amp;show-logo=false" />
+    </object>
+  } else {
+        "Увы, но мы еще не загрузили видео. Скоро загрузим!"
+  }
+}
+
+func display_element() {
+	<p>
+		<a href="#" class="go_page_lectures">Программа(все лекции) > </a>
+		"{ .[0].name }"
+	</p>
+	<h3>{ .[0].name }</h3>
+	<div class="teacher-container">
+		<a class="people-sticker-inner" href="#">
+		display_photo()
+	<p class="yandex">{ .[0].teacher_name }</p></a>
+	</div>
+	<div>
+		<div class="horiz-menu">
+			<div class="horiz-menu-item">
+				<a id="show_hide_present" href="#">Посмотреть презентацию</a>
+			</div>
+			<div class="horiz-menu-item">
+				<a id="show_hide_video" href="#">Посмотреть видео</a>
+			</div>
+		</div>
+		<div class="hidden media" id="presentation">
+		    display_presentation()
+		</div>
+		<div class="hidden media" id="video">
+			display_video()
+		</div>
+	</div>
+}

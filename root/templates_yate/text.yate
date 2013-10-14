@@ -1,0 +1,9 @@
+module "text"
+
+match / {
+	display_text()
+}
+
+func display_text(){
+	" { .text }"
+}

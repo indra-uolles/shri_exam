@@ -1,0 +1,19 @@
+module "horizontal_menu"
+
+match / {
+	<div class="horiz-menu">
+		for .item {
+			<div class="horiz-menu-item">
+					get_menu_elem()				
+			</div>
+   		}
+	</div>
+}
+
+func get_menu_elem() {
+    if (.selected) {
+        .title
+    } else {
+        <a href="{ .link }" id="{ .id }">{ .title }</a>
+    }
+}

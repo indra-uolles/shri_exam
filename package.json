@@ -1,0 +1,16 @@
+{
+  "name": "shri_exam",
+  "version": "1.0.0",
+  "author": "Smirnova Natalia",
+  "description": "Экзаменационное задание на ШРИ 2013 Смирновой Наталии.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indra-uolles/shri_exam.git"
+  },
+  "dependencies" : {
+    "http-server"   :  "*"
+  },
+  "scripts": {
+    "start": "./node_modules/http-server/bin/http-server ./ -p 9000"
+  }
+}
