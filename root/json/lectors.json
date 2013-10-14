@@ -6,7 +6,7 @@
                 "item": 
                     [{
                         "name": "Алексей Бережной",
-                        "about": "До Яндекса занимался разработкой браузерной MMORPG. С 2011 года работает над интерфейсом Яндекс.Директа.",
+                        "about": "http://tech.yandex.ru/people/47352/",
                         "photo_url": "./img/lectors/aberezh.jpeg"
                     }]
             },
@@ -20,7 +20,7 @@
             {
                 "item": [
                     {"name": "Анна Чеботкевич"},
-                    {"about": null},
+                    {"about": "http://tech.yandex.ru/people/143134/"},
                     {"photo_url": "./img/lectors/chebotkevich.jpg"}
                 ]
             },
@@ -34,7 +34,7 @@
             {
                 "item": [
                     {"name": "Виктор Ашик"},
-                    {"about": null},
+                    {"about": "http://tech.yandex.ru/people/310/"},
                     {"photo_url": "./img/lectors/365x365 (3).jpeg"}
                 ]
             },
@@ -48,7 +48,7 @@
             {
                 "item": [
                     {"name": "Георгий Мостоловица"},
-                    {"about": "Веб-разработчик. В Яндексе занимается ускорением фронтенда Поиска."},
+                    {"about": "http://tech.yandex.ru/people/46216/"},
                     {"photo_url": "./img/lectors/365x365 (2).jpeg"}
                 ]
             },
@@ -62,7 +62,7 @@
             {
                 "item": [
                     {"name": "Денис Бугарчев"},
-                    {"about": "Верстальщик, разработчик веб-интерфейсов, автор подкаста о веб-разработке «Сделайте мне красиво!»."},
+                    {"about": "http://tech.yandex.ru/people/434/"},
                     {"photo_url": "./img/lectors/365x365 (4).jpeg"}
                 ]
             },
@@ -76,7 +76,7 @@
             {
                 "item": [
                     {"name": "Дмитрий Поляков"},
-                    {"about": null},
+                    {"about": "http://tech.yandex.ru/people/144389/"},
                     {"photo_url": "./img/lectors/365x365 (5).jpeg"}
                 ]
             },
@@ -90,7 +90,7 @@
             {
                 "item": [
                     {"name": "Игорь Новак"},
-                    {"about": "Разработчик интерфейсов"},
+                    {"about": "http://tech.yandex.ru/people/60778/"},
                     {"photo_url": "./img/lectors/365x365 (7).jpeg"}
                 ]
             },
@@ -104,7 +104,7 @@
             {
                 "item": [
                     {"name": "Марина Широчкина"},
-                    {"about": "Занимается тестированием уже девять лет. В Яндексе с 2007 года. Последний год работает в группе производительности интерфейсов."},
+                    {"about": "http://tech.yandex.ru/people/45533/"},
                     {"photo_url": "./img/lectors/365x365 (8).jpeg"}
                 ]
             },
@@ -118,7 +118,7 @@
             {
                 "item": [
                     {"name": "Михаил Трошев"},
-                    {"about": "null"},
+                    {"about": "http://tech.yandex.ru/people/392/"},
                     {"photo_url": "./img/lectors/365x365 (10).jpeg"}
                 ]
             },
@@ -132,7 +132,7 @@
             {
                 "item": [
                     {"name": "Роман Андриади"},
-                    {"about": "Работает в департаменте эксплуатации Яндекса с 2005 года. С 2010 года —руководитель группы администрирования коммуникационных, контент- и внутренних сервисов."},
+                    {"about": "http://tech.yandex.ru/people/25/"},
                     {"photo_url": "./img/lectors/365x365 (9).jpeg"}
                 ]
             },
@@ -146,7 +146,7 @@
             {
                 "item": [
                     {"name": "Сергей Сергеев"},
-                    {"about": "Профессионально занимается разработкой уже более 10 лет, из них 5 в Яндексе."},
+                    {"about": "http://tech.yandex.ru/people/380/"},
                     {"photo_url": "./img/lectors/365x365 (11).jpeg"}
                 ]
             },
@@ -160,7 +160,7 @@
             {
                 "item": [
                     {"name": "Сергей Черкасов"},
-                    {"about": null},
+                    {"about": "http://tech.yandex.ru/people/144481/"},
                     {"photo_url": "./img/lectors/365x365 (12).jpeg"}
                 ]
             },
@@ -174,7 +174,7 @@
             {
                 "item": [
                     {"name": "Тарас Иващенко"},
-                    {"about": "Администратор информационной безопасности в Яндексе. Специалист по информационной безопасности, проповедник свободного программного обеспечения, участник проектов w3af и OWASP."},
+                    {"about": "http://tech.yandex.ru/people/20/"},
                     {"photo_url": "./img/lectors/365x365 (13).jpeg"}
                 ]
             },

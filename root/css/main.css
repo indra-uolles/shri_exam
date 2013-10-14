@@ -155,5 +155,4 @@ p.yandex:first-letter, p.yandex:hover { color: red; }
   margin-bottom: 5px; }
 
 #video {
-  z-index: 2;
-}
+  z-index: 2; }

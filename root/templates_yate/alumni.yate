@@ -20,19 +20,19 @@ func display_link(link, img){
 
 func display_vk(){
 	if (.[0].link_vk) {
-		<a href="{ .[0].link_vk }"><img src="./img/vk.png" class="icon"/></a>
+		<a href="{ .[0].link_vk }"><img src="./img/icons/vkontakte.png" class="icon"/></a>
 	}
 }
 
 func display_facebook(){
 	if (.[0].link_facebook) {
-		<a href="{ .[0].link_facebook }"><img src="./img/facebook.png" class="icon"/></a>
+		<a href="{ .[0].link_facebook }"><img src="./img/icons/facebook.png" class="icon"/></a>
 	}
 }
 
 func display_github(){
 	if (.[0].link_gihub) {
-		<a href="{ .[0].link_gihub }"><img src="./img/github.png" class="icon"/></a>
+		<a href="{ .[0].link_gihub }"><img src="./img/icons/github.png" class="icon"/></a>
 	}
 }
 
@@ -45,7 +45,7 @@ func display_about(){
 
 func display_alumni() {
 	<p>
-		<a href="#">Все выпускники > </a> 
+		<a href="#" class="go_page_students">Все выпускники > </a> 
 		"{ .[0].first_name } { .[0].last_name }"
 	</p>
 	<div class="alumni-container">

@@ -7,23 +7,10 @@
     "city":"Санкт-Петербург",
     "about":"О себе о себе о себе",
     "link_photo":"./img/students/XISCuQa83W4.jpg",
-    "link_facebook":"facebook.com/popov.nikita/",
-    "link_vk":"vk.com/nikita.v.popov/",
-    "link_gihub":"github.com/losnikitos/",
-    "link_yaru":"losnikitos123.ya.ru"
-  },
-  {
-    "id": 2,
-    "Timestamp":"9/28/2013 15:13:05",
-    "first_name":"Роман",
-    "last_name":"Орловский",
-    "city":"Нижний Новгород",
-    "about":"Обо мне, обо мне, обо мне",
-    "link_photo":"./img/students/zID6ILpd6L0.jpg",
-    "link_facebook":"",
-    "link_vk":"http://vk.com/id3776751",
-    "link_gihub":"https://github.com/Romanaldo/",
-    "link_yaru":"http://ctuxu-r.ya.ru/"
+    "link_facebook":"http://facebook.com/popov.nikita/",
+    "link_vk":"http://vk.com/nikita.v.popov/",
+    "link_gihub":"https://github.com/losnikitos/",
+    "link_yaru":"http://losnikitos123.ya.ru"
   },
   {
     "id": 3,
@@ -47,9 +34,9 @@
     "about":"С детства вожусь с техникой, слежу за прогрессом и познаю новое. Мне нравятся веб-технологии, возможность увидеть результат работы и показать его другим. Школа стала для меня вектором в саморазвитии, направляет и помогает пробиться в джунглях front-end`а.",
     "link_photo":"./img/students/0_9b1ec_264822bf_L.jpg",
     "link_facebook":"",
-    "link_vk":"vk.com/dales3d",
-    "link_gihub":"github.com/maxim-popkov/",
-    "link_yaru":"dales3d.ya.ru/"
+    "link_vk":"http://vk.com/dales3d",
+    "link_gihub":"http://github.com/maxim-popkov/",
+    "link_yaru":"http://dales3d.ya.ru/"
   },
   {
     "id": 5,
@@ -179,7 +166,7 @@
     "link_facebook":"https://www.facebook.com/garret.rus",
     "link_vk":"http://vk.com/id3157005",
     "link_gihub":"https://github.com/4eb0da",
-    "link_yaru":"garret-rus.ya.ru/"
+    "link_yaru":"http://garret-rus.ya.ru/"
   },
   {
     "id": 15,
@@ -284,19 +271,6 @@
     "link_vk":"http://vk.com/maxim.myalin",
     "link_gihub":"https://github.com/hungrymarvin",
     "link_yaru":"http://maximmyalin.ya.ru/"
-  },
-  {
-    "id": 23,
-    "Timestamp":"10/2/2013 1:29:39",
-    "first_name":"Сергей",
-    "last_name":"Попов",
-    "city":"Москва",
-    "about":"Родился и вырос в Москве.\nПрограммировать начал в детском клубе \"Компьютер\"http://www.child.ru/about.html мы там выполняли разные задания на языках Basic, Logo, Z-80 Assembler. От преподавателей перенял увлечение программированием. Работал компьютерным лаборантом в школе.\nПервый опыт с веб-разработкой в 2004 году, страничка показывала дерево Ethernet-сети и вероятные проблемные узлы.\n\nВ какой-то момент JavaScript внезапно впечатлил выразительностью кода, для меня это первый язык основанный на прототипах.\n\nДля своевременного осваивания JavaScript (CSS, UI) разрабатываю SPA-проект, связанный с параметрическими расчетами, как смог обобщил предмет и интерфейс, пример можно посмотреть здесь http://acidome.ru/lab/calc/next.html#1/2_Class_II_Cone_4V_R4.2_beams_100x100 \nЕсть сообщество, для которого затеен данный проект, приятно осознавать, что твоя программа может быть полезной. Еще фишка в том, что данные расчеты сложно произвести самому и не каждому под силу. Вспоминается случай, письмо из Бразилии от учителя, который жаловался что программа не работает если страницу закачать себе на комп, он хотел показать детям где-то в сельской местности, где нет инета. Со временем появился такой функционал.\n\nПолтора года работал над порталом http://www.gosuslugi.ru/, из интересного двухстронняя шаблонизация и обобщение для форм, научили их работать по декларативному описанию, без кода. Сейчас работаю JavaScript-разработчиком на http://www.rabota.ru/ тут много чего нужно улучшать.\n\nЧлен Пиратской партии России.\n\nКоллега на работе показал форму с задачками, потом пришло письмо с приглашением в ШРИ.\nПришел для получения знаний и опыта, решать задачки. Затея со школой мне нравится.",
-    "link_photo":"./img/students/0_9aeef_251f458a_L.jpeg",
-    "link_facebook":"https://www.facebook.com/profile.php?id=100001345209443",
-    "link_vk":"http://vk.com/popitch",
-    "link_gihub":"https://github.com/popitch",
-    "link_yaru":"http://popitch.ya.ru/"
   },
   {
     "id": 24,

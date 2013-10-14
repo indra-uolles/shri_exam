@@ -4,7 +4,7 @@ match / {
 
     <ul class="people">
     for .* {
-    	<a class="people-sticker" href="#">
+    	<a class="people-sticker" href="#" id="{ .id }">
 	    	display_photo()
 	    	<p>
 	    		"{ .first_name } { .last_name }"

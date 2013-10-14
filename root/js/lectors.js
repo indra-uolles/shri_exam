@@ -39,7 +39,9 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j2 = [ 0, '*' ];
 
-    var j3 = [ 0, 'item', 0, 'name' ];
+    var j3 = [ 0, 'item', 0, 'about' ];
+
+    var j4 = [ 0, 'item', 0, 'name' ];
 
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {
@@ -50,10 +52,10 @@ var yr = yr || require('yate/lib/runtime.js');
         var items0 = selectNametest('*', c0, []);
         for (var i1 = 0, l1 = items0.length; i1 < l1; i1++) {
             var c1 = items0[ i1 ];
-            r0 += "<a class=\"" + "people-sticker" + "\" href=\"" + "#" + "\">";
+            r0 += "<a class=\"" + "people-sticker" + "\" href=\"" + nodeset2attrvalue( ( m.s(j3, c1) ) ) + "\">";
             r0 += m.f('f0', c1, i1, l1, a0);
             r0 += "<p class=\"" + "yandex" + "\">";
-            r0 += nodeset2xml( ( m.s(j3, c1) ) );
+            r0 += nodeset2xml( ( m.s(j4, c1) ) );
             r0 += "</p>";
             r0 += "</a>";
         }

@@ -75,7 +75,7 @@ var yr = yr || require('yate/lib/runtime.js');
 
             var j3 = [ 1, 0, 3, 0, 0, 'link_vk' ];
 
-            r0 += "<a href=\"" + nodeset2attrvalue( ( m.s(j3, c0) ) ) + "\"><img src=\"" + "./img/vk.png" + "\" class=\"" + "icon" + "\"/></a>";
+            r0 += "<a href=\"" + nodeset2attrvalue( ( m.s(j3, c0) ) ) + "\"><img src=\"" + "./img/icons/vkontakte.png" + "\" class=\"" + "icon" + "\"/></a>";
         }
 
         return r0;
@@ -99,7 +99,7 @@ var yr = yr || require('yate/lib/runtime.js');
 
             var j5 = [ 1, 0, 3, 0, 0, 'link_facebook' ];
 
-            r0 += "<a href=\"" + nodeset2attrvalue( ( m.s(j5, c0) ) ) + "\"><img src=\"" + "./img/facebook.png" + "\" class=\"" + "icon" + "\"/></a>";
+            r0 += "<a href=\"" + nodeset2attrvalue( ( m.s(j5, c0) ) ) + "\"><img src=\"" + "./img/icons/facebook.png" + "\" class=\"" + "icon" + "\"/></a>";
         }
 
         return r0;
@@ -123,7 +123,7 @@ var yr = yr || require('yate/lib/runtime.js');
 
             var j7 = [ 1, 0, 3, 0, 0, 'link_gihub' ];
 
-            r0 += "<a href=\"" + nodeset2attrvalue( ( m.s(j7, c0) ) ) + "\"><img src=\"" + "./img/github.png" + "\" class=\"" + "icon" + "\"/></a>";
+            r0 += "<a href=\"" + nodeset2attrvalue( ( m.s(j7, c0) ) ) + "\"><img src=\"" + "./img/icons/github.png" + "\" class=\"" + "icon" + "\"/></a>";
         }
 
         return r0;
@@ -166,7 +166,7 @@ var yr = yr || require('yate/lib/runtime.js');
 
         r0 += closeAttrs(a0);
         r0 += "<p>";
-        r0 += "<a href=\"" + "#" + "\">" + "Все выпускники &gt; " + "</a>";
+        r0 += "<a href=\"" + "#" + "\" class=\"" + "go_page_students" + "\">" + "Все выпускники &gt; " + "</a>";
         r0 += nodeset2xml( ( m.s(j11, c0) ) ) + " " + nodeset2xml( ( m.s(j12, c0) ) );
         r0 += "</p>";
         r0 += "<div class=\"" + "alumni-container" + "\">";
