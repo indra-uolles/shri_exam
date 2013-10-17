@@ -131,7 +131,7 @@ var yr = yr || require('yate/lib/runtime.js');
         r0 += "<div>";
         r0 += "<div class=\"" + "horiz-menu" + "\">";
         r0 += "<div class=\"" + "horiz-menu-item" + "\">";
-        r0 += "<a id=\"" + "show_hide_present" + "\" href=\"" + "#" + "\">" + "Посмотреть презентацию" + "</a>";
+        r0 += "<a id=\"" + "show_hide_presentation" + "\" href=\"" + "#" + "\">" + "Посмотреть презентацию" + "</a>";
         r0 += "</div>";
         r0 += "<div class=\"" + "horiz-menu-item" + "\">";
         r0 += "<a id=\"" + "show_hide_video" + "\" href=\"" + "#" + "\">" + "Посмотреть видео" + "</a>";

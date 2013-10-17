@@ -50,7 +50,7 @@ func display_element() {
 	<div>
 		<div class="horiz-menu">
 			<div class="horiz-menu-item">
-				<a id="show_hide_present" href="#">Посмотреть презентацию</a>
+				<a id="show_hide_presentation" href="#">Посмотреть презентацию</a>
 			</div>
 			<div class="horiz-menu-item">
 				<a id="show_hide_video" href="#">Посмотреть видео</a>

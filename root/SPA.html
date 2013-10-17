@@ -66,6 +66,7 @@
         $("#content").html('');
         $("#content").append(get_lectures());
         $(".one-lecture").on('click', function(e) {
+            //формируем вид лекции
             var x = new XMLHttpRequest();
             x.open("GET", "./json/lectures.json", false);
             x.send();
@@ -73,7 +74,11 @@
             filtered_lectures = JSPath.apply('.lectures{.id === ' + this.id + '}', JSON.parse(lectures));
             $("#content").html('');
             $("#content").append(get_lecture(this.id));
-            load_video_presentation_show_hide_scripts();
+
+            //подгружаем скрипт для кнопок "Показать..." "Скрыть..."
+            $.getScript('./js/accordeon.js', function(){});
+
+            //обработчик для ссылки "Программа (все лекции)"
             $('.go_page_lectures').on('click', function() {
                 $("#page_lectures").trigger("click");
             });

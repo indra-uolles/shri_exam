@@ -72,44 +72,6 @@ function get_lecture(id) {
     return cpl_content;
 }
 
-//эта функция помогает реализовывать что-то вроде аккордеона с видео и
-//презентацией на странице лекции
-function load_video_presentation_show_hide_scripts() {
-
-    var present_link = document.getElementById("show_hide_present");
-    var video_link = document.getElementById("show_hide_video");
-    var video = document.getElementById("video");
-    var presentation = document.getElementById("presentation");
-    present_link.onclick = function() {
-
-        if (video.className != 'hidden') {
-            video.className = 'hidden';
-            video_link.innerHTML = 'Показать видео';
-        }
-        if (presentation.className != 'visible') {
-            presentation.className = 'visible';
-            present_link.innerHTML = 'Cкрыть презентацию';
-        } else {
-            presentation.className = 'hidden';
-            present_link.innerHTML = 'Показать презентацию';
-        }
-    }
-    video_link.onclick = function() {
-
-        if (presentation.className != 'hidden') {
-            presentation.className = 'hidden';
-            present_link.innerHTML = 'Показать презентацию';
-        }
-        if (video.className != 'visible') {
-            video.className = 'visible';
-            video_link.innerHTML = 'Скрыть видео';
-        } else {
-            video.className = 'hidden';
-            video_link.innerHTML = 'Показать видео';
-        }
-    }
-}
-
 //функция используется на странице Выпускники. Формирует список всех студентов
 function get_students() {
     var x = new XMLHttpRequest();
