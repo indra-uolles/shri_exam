@@ -1,0 +1,188 @@
+{"lectors": 
+    [
+        {
+            "lector": 
+            {
+                "item": 
+                    [{
+                        "name": "Алексей Бережной",
+                        "about": "http://tech.yandex.ru/people/47352/",
+                        "photo_url": "./img/lectors/aberezh.jpeg"
+                    }]
+            },
+            "instruments" : 0,
+            "technologies": 1,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 1
+        }, {
+            "lector": 
+            {
+                "item": [
+                    {"name": "Анна Чеботкевич"},
+                    {"about": "http://tech.yandex.ru/people/143134/"},
+                    {"photo_url": "./img/lectors/chebotkevich.jpg"}
+                ]
+            },
+            "instruments" : 0,
+            "technologies": 1,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        }, {
+            "lector": 
+            {
+                "item": [
+                    {"name": "Виктор Ашик"},
+                    {"about": "http://tech.yandex.ru/people/310/"},
+                    {"photo_url": "./img/lectors/365x365 (3).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        }, {
+            "lector": 
+            {
+                "item": [
+                    {"name": "Георгий Мостоловица"},
+                    {"about": "http://tech.yandex.ru/people/46216/"},
+                    {"photo_url": "./img/lectors/365x365 (2).jpeg"}
+                ]
+            },
+            "instruments" : 0,
+            "technologies": 1,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Денис Бугарчев"},
+                    {"about": "http://tech.yandex.ru/people/434/"},
+                    {"photo_url": "./img/lectors/365x365 (4).jpeg"}
+                ]
+            },
+            "instruments" : 0,
+            "technologies": 1,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 1
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Дмитрий Поляков"},
+                    {"about": "http://tech.yandex.ru/people/144389/"},
+                    {"photo_url": "./img/lectors/365x365 (5).jpeg"}
+                ]
+            },
+            "instruments" : 0,
+            "technologies": 1,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Игорь Новак"},
+                    {"about": "http://tech.yandex.ru/people/60778/"},
+                    {"photo_url": "./img/lectors/365x365 (7).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Марина Широчкина"},
+                    {"about": "http://tech.yandex.ru/people/45533/"},
+                    {"photo_url": "./img/lectors/365x365 (8).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Михаил Трошев"},
+                    {"about": "http://tech.yandex.ru/people/392/"},
+                    {"photo_url": "./img/lectors/365x365 (10).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Роман Андриади"},
+                    {"about": "http://tech.yandex.ru/people/25/"},
+                    {"photo_url": "./img/lectors/365x365 (9).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Сергей Сергеев"},
+                    {"about": "http://tech.yandex.ru/people/380/"},
+                    {"photo_url": "./img/lectors/365x365 (11).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0 
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Сергей Черкасов"},
+                    {"about": "http://tech.yandex.ru/people/144481/"},
+                    {"photo_url": "./img/lectors/365x365 (12).jpeg"}
+                ]
+            },
+            "instruments" : 1,
+            "technologies": 0,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0 
+        },{
+            "lector": 
+            {
+                "item": [
+                    {"name": "Тарас Иващенко"},
+                    {"about": "http://tech.yandex.ru/people/20/"},
+                    {"photo_url": "./img/lectors/365x365 (13).jpeg"}
+                ]
+            },
+            "instruments" : 0,
+            "technologies": 1,
+            "design": 0,
+            "frameworks": 0,
+            "languages": 0 
+        }
+    ]
+}

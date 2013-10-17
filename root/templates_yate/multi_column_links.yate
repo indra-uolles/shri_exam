@@ -1,0 +1,19 @@
+module "multi_column_links"
+
+match / {
+    for .item   {
+    	<div class="one-multi-col">
+    		for .* {
+    			display_element()
+    		}
+      	</div>
+       }
+}
+
+func display_element() {
+    if (.type == 'header') {
+        <h4>{ .content }</h4>
+    } else {
+    	<p><a href="{ .link }" id="{ .id }" class="one-lecture">{ .title }</a></p>
+    }
+ }

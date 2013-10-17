@@ -1,0 +1,12 @@
+module "logo"
+
+match / {
+	<div class="logo">
+		<div class="logo-name">
+			"{ .logo_name }"
+		</div>
+		<div class="when-where">
+			"{ .when_where }"
+		</div>
+	</div>
+}

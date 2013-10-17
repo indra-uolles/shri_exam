@@ -1,0 +1,12 @@
+module "text_media"
+
+match / {
+	<div class="half-page">
+		"{ .text }"
+	</div>
+	<div class="half-page">
+		<div class="shift-down-20">
+			<iframe width="{ .width }" height="{ .height }" frameborder="0" src="{ .link }"></iframe>
+		</div>
+	</div>
+}
