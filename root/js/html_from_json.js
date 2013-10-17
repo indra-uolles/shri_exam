@@ -2,10 +2,7 @@
 //только по какой-то группе лекций
 function get_lectors(sel_number) {
 
-    var x = new XMLHttpRequest();
-    x.open("GET", "/root/json/lectors.json", false);
-    x.send();
-    lectors = x.responseText;
+    lectors = get_json("/root/json/lectors.json");
     var lectors_arr = JSON.parse(lectors);
 
     theme = '';
@@ -38,10 +35,7 @@ function get_lectors(sel_number) {
 
 //функция используется на странице Программа. Выводит список всех лекций сгруппированных по темам
 function get_lectures() {
-    var x = new XMLHttpRequest();
-    x.open("GET", "/root/json/program.json", false);
-    x.send();
-    program = x.responseText;
+    program = get_json("/root/json/program.json");
     var lectures_arr = JSON.parse(program);
     var cpl_content = yr.run('multi_column_links', lectures_arr);
     return cpl_content;
@@ -50,10 +44,7 @@ function get_lectures() {
 //функция формирует окно конкретной лекции (докладчик, видео, презентация)
 function get_lecture(id) {
 
-    var x = new XMLHttpRequest();
-    x.open("GET", "./json/lectures.json", false);
-    x.send();
-    var lectures = x.responseText;
+    lectures = get_json("./json/lectures.json");
     filtered_lectures = JSPath.apply('.lectures{.id === ' + id + '}', JSON.parse(lectures));
 
     var cpl_content;
@@ -74,11 +65,8 @@ function get_lecture(id) {
 
 //функция используется на странице Выпускники. Формирует список всех студентов
 function get_students() {
-    var x = new XMLHttpRequest();
-    x.open("GET", "./json/students.json", false);
-    x.send();
-    students = x.responseText;
 
+    students = get_json("./json/students.json");
     var students_arr = JSON.parse(students);
     var cpl_content = yr.run('students', students_arr);
     return cpl_content;
@@ -86,13 +74,17 @@ function get_students() {
 
 //функция формирует личную страничку выпускника Школы
 function get_student(id) {
-    var x = new XMLHttpRequest();
-    x.open("GET", "./json/students.json", false);
-    x.send();
-    students = x.responseText;
 
+    students = get_json("./json/students.json");
     var students_arr = JSON.parse(students);
     student = JSPath.apply('.students{.id === ' + id + '}', students_arr)[0];
     var cpl_content = yr.run('alumni', student);
     return cpl_content;
+}
+
+function get_json(filename){
+    var x = new XMLHttpRequest();
+    x.open("GET", filename, false);
+    x.send();
+    return x.responseText;
 }
