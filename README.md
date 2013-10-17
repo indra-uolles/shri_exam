@@ -1,6 +1,9 @@
 shri_exam
 =========
 
+###Запущенная версия тут:
+http://shri.sky2high.net/root/SPA.html
+
 ### Использованные библиотеки
 
 * jQuery, 
@@ -12,6 +15,5 @@ shri_exam
 1. `https://github.com/indra-uolles/shri_exam.git`
 2. `cd shri_exam`
 3. `npm install`
-4. `npm install yate`
-5. `npm start`
-6. Открыть в браузере [http://localhost:9000/root/SPA.html](http://localhost:9000/root/SPA.html)
+4. `npm start`
+5. Открыть в браузере [http://localhost:9000/root/SPA.html](http://localhost:9000/root/SPA.html)

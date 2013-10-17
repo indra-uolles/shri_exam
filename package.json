@@ -8,7 +8,8 @@
     "url": "https://github.com/indra-uolles/shri_exam.git"
   },
   "dependencies" : {
-    "http-server"   :  "*"
+    "http-server"   :  "*",
+    "yate": ""
   },
   "scripts": {
     "start": "./node_modules/http-server/bin/http-server ./ -p 9000"
