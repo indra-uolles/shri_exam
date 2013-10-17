@@ -86,6 +86,9 @@
         filtered_lectures = JSPath.apply('.lectures{.id === ' + id + '}', JSON.parse(lectures));
         $("#content").html('');
         $("#content").append(get_lecture(id));
+        if ($('#content').html().trim().length === 0){
+            $("#content").load("./pages/empty_lecture.html");
+        }
     }
 
     function call_load_content_lectures() {

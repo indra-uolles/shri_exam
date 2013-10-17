@@ -45,10 +45,10 @@ function get_lectures() {
 function get_lecture(id) {
 
     lectures = get_json("./json/lectures.json");
-    filtered_lectures = JSPath.apply('.lectures{.id === ' + id + '}', JSON.parse(lectures));
 
     var cpl_content;
-    if (filtered_lectures.length > 0) {
+    try{
+        filtered_lectures = JSPath.apply('.lectures{.id === ' + id + '}', JSON.parse(lectures));
         // Получаем последний сегмент из URL, поскольку именно в нем содержится
         // id видео, которое нужно плееру
         lecture = filtered_lectures[0];
@@ -56,10 +56,11 @@ function get_lecture(id) {
         var url_parts = video_url.split('/');
         lecture.video_storage = url_parts[url_parts.length - 2];
         cpl_content = yr.run('lecture', lecture);
-    } else {
-        cpl_content = "<div>К сожалению, мы не успели загрузить материалы этой лекции. Stay tuned!</div>";
     }
-
+    catch(err){
+        cpl_content = "";
+    }
+    
     return cpl_content;
 }
 
