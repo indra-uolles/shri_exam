@@ -1,3 +1,6 @@
+/**
+ * @return {String} html-код блока "Логотип"
+ */
 function get_logo(){ 
     var data = {
         logo_name: 'Яндекс ШРИ в Москве 2013',
@@ -7,6 +10,9 @@ function get_logo(){
     return cpl_logo;
 }
 
+/**
+ * @return {String} html-код меню в шапке сайта
+ */
 function get_horiz_menu(){   
     data = {
         item: [{
@@ -39,6 +45,9 @@ function get_horiz_menu(){
     return cpl_menu;
 }
 
+/**
+ * @return {String} html-код фильтра по темам на странице Докладчики
+ */
 function get_lectors_filter(){
     var data = {
         item: [{

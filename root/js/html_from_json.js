@@ -1,5 +1,8 @@
-﻿//функция используется на странице Докладчики для отображения списка докладчиков - всех или
-//только по какой-то группе лекций
+﻿/**
+ * Формирование страницы со всеми докладчиками или только по какой-то группе лекций
+ * @param  {Integer} sel_number
+ * @return {String} html-код страницы Докладчики
+ */
 function get_lectors(sel_number) {
 
     lectors = get_json("/root/json/lectors.json");
@@ -33,7 +36,10 @@ function get_lectors(sel_number) {
     return cpl_content;
 }
 
-//функция используется на странице Программа. Выводит список всех лекций сгруппированных по темам
+/**
+ * Выводится страница с сгруппированными по темам лекциями
+ * @return {String} html-код страницы Программа
+ */
 function get_lectures() {
     program = get_json("/root/json/program.json");
     var lectures_arr = JSON.parse(program);
@@ -41,7 +47,10 @@ function get_lectures() {
     return cpl_content;
 }
 
-//функция формирует окно конкретной лекции (докладчик, видео, презентация)
+/**
+ * @param  {Integer} id
+ * @return {String} html-код страницы конкретной лекции
+ */
 function get_lecture(id) {
 
     lectures = get_json("./json/lectures.json");
@@ -64,7 +73,9 @@ function get_lecture(id) {
     return cpl_content;
 }
 
-//функция используется на странице Выпускники. Формирует список всех студентов
+/**
+ * @return {String} html-код страницы Выпускники
+ */
 function get_students() {
 
     students = get_json("./json/students.json");
@@ -74,6 +85,10 @@ function get_students() {
 }
 
 //функция формирует личную страничку выпускника Школы
+/**
+ * @param  {Integer} id идентификатор выпускника
+ * @return {String} html-код страницы конкретного выпускника
+ */
 function get_student(id) {
 
     students = get_json("./json/students.json");
@@ -83,6 +98,10 @@ function get_student(id) {
     return cpl_content;
 }
 
+/**
+ * @param  {String} путь к файлу
+ * @return {String} json из файла
+ */
 function get_json(filename){
     var x = new XMLHttpRequest();
     x.open("GET", filename, false);

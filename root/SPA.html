@@ -24,9 +24,8 @@
     build_index_page();
 
     //обработка навигации по верхнему меню
-    $('#page_index').on('click', function() {
-        load_content_index();
-    });
+    $('#page_index').on('click', load_content_index);
+    
     $('#page_lectures').on('click', function() {
         load_content_lectures();
         $(".one-lecture").on('click', function(e) {
@@ -42,6 +41,7 @@
             return false;
         });
     });
+
     $('#page_lectors').on('click', function() {
 
         load_content_lectors();
@@ -50,12 +50,10 @@
         });
     });
 
-    $('#page_rules').on('click', function() {
-        load_content_rules();
-    });
-    $('#page_faq').on('click', function() {
-        load_content_faq();
-    });
+    $('#page_rules').on('click', load_content_rules);
+
+    $('#page_faq').on('click', load_content_faq);
+
     $('#page_students').on('click', function() {
         load_content_students();
 
@@ -86,7 +84,7 @@
         filtered_lectures = JSPath.apply('.lectures{.id === ' + id + '}', JSON.parse(lectures));
         $("#content").html('');
         $("#content").append(get_lecture(id));
-        if ($('#content').html().trim().length === 0){
+        if ($('#content').html().trim().length === 0) {
             $("#content").load("./pages/empty_lecture.html");
         }
     }
